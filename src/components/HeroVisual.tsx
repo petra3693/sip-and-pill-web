@@ -4,50 +4,51 @@ import Image from "next/image";
 import { AppMockup } from "@/components/AppMockup";
 
 /**
- * Drop + Pill hug-frame with the live app UI sitting in the transparent
- * phone slot (measured from the illustration’s white placeholder).
+ * Brand-style hero huddle: Drop behind left, phone center, Pill in front right.
+ * One floating group — no mismatched phone-frame composites.
  */
-const PHONE_SLOT = {
-  left: "22.3%",
-  top: "15.7%",
-  width: "60.2%",
-  height: "65.8%",
-};
-
 export function HeroVisual() {
   return (
-    <div className="relative mx-auto w-full max-w-[540px] sm:max-w-[580px]">
+    <div className="relative mx-auto w-full max-w-[480px] sm:max-w-[520px]">
       <div
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[78%] w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-90 blur-3xl"
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[75%] w-[75%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
         style={{
           background:
-            "radial-gradient(circle, rgba(255,126,112,0.28) 0%, rgba(126,200,245,0.2) 40%, rgba(92,77,154,0.22) 55%, transparent 72%)",
+            "radial-gradient(circle, rgba(255,126,112,0.3) 0%, rgba(126,200,245,0.2) 40%, rgba(92,77,154,0.18) 60%, transparent 72%)",
         }}
         aria-hidden="true"
       />
 
       <Sparkles />
 
-      <div className="relative aspect-square w-full animate-float">
-        {/* App sits in the phone hole, under the illustrated frame */}
-        <div
-          className="absolute z-[1] overflow-hidden bg-[#fff8f6] shadow-[0_18px_40px_rgba(0,0,0,0.35)]"
-          style={{
-            ...PHONE_SLOT,
-            borderRadius: "18% / 14%",
-          }}
-        >
-          <AppMockup fill />
+      <div className="relative mx-auto aspect-[4/5] w-full max-w-[420px] animate-float sm:max-w-[460px]">
+        {/* Drop — larger, sits behind the phone */}
+        <Image
+          src="/mascots/drop-hugging.png"
+          alt=""
+          width={480}
+          height={480}
+          priority
+          className="pointer-events-none absolute -left-[12%] top-[6%] z-[1] w-[58%] select-none drop-shadow-[0_18px_36px_rgba(0,0,0,0.35)] sm:-left-[14%] sm:w-[60%]"
+        />
+
+        {/* Phone */}
+        <div className="absolute left-1/2 top-[4%] z-[2] w-[58%] max-w-[270px] -translate-x-1/2 sm:w-[56%] sm:max-w-[290px]">
+          <div className="overflow-hidden rounded-[34px] bg-[#1a1428] p-[6px] shadow-[0_28px_60px_rgba(0,0,0,0.45)] ring-1 ring-white/10">
+            <div className="aspect-[9/19] overflow-hidden rounded-[28px] bg-[#fff8f6]">
+              <AppMockup fill />
+            </div>
+          </div>
         </div>
 
+        {/* Pill — larger, in front on the right */}
         <Image
-          src="/mascots/hero-hug-frame.png?v=2"
+          src="/mascots/pill-hugging.png"
           alt=""
-          width={1024}
-          height={1024}
+          width={480}
+          height={480}
           priority
-          unoptimized
-          className="pointer-events-none relative z-[2] h-auto w-full select-none drop-shadow-[0_24px_48px_rgba(0,0,0,0.35)]"
+          className="pointer-events-none absolute -right-[12%] top-[10%] z-[3] w-[56%] select-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)] sm:-right-[14%] sm:w-[58%]"
         />
       </div>
     </div>
@@ -56,12 +57,12 @@ export function HeroVisual() {
 
 function Sparkles() {
   const dots = [
-    "left-[10%] top-[10%]",
-    "right-[12%] top-[8%]",
-    "left-[6%] bottom-[18%]",
-    "right-[8%] bottom-[14%]",
-    "left-[18%] top-[34%]",
-    "right-[16%] top-[38%]",
+    "left-[8%] top-[12%]",
+    "right-[10%] top-[8%]",
+    "left-[4%] bottom-[20%]",
+    "right-[6%] bottom-[16%]",
+    "left-[20%] top-[40%]",
+    "right-[18%] top-[36%]",
   ];
 
   return (
@@ -69,7 +70,7 @@ function Sparkles() {
       {dots.map((pos) => (
         <span
           key={pos}
-          className={`absolute size-1.5 rounded-full bg-white/70 shadow-[0_0_10px_rgba(255,255,255,0.55)] ${pos}`}
+          className={`absolute size-1.5 rounded-full bg-white/75 shadow-[0_0_12px_rgba(255,255,255,0.55)] ${pos}`}
         />
       ))}
     </div>

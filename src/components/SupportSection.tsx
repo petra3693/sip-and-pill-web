@@ -11,7 +11,7 @@ export function SupportSection() {
   return (
     <section id="support" className="scroll-mt-24 px-5 py-16 sm:px-8 sm:py-20">
       <div className="mx-auto max-w-6xl">
-        <div className="overflow-hidden rounded-[32px] border border-[#f2e8e4] bg-[#fff8f6] px-6 py-10 shadow-[var(--shadow-soft)] sm:px-10 sm:py-12">
+        <div className="overflow-hidden rounded-[32px] border border-[#d8d0f5] bg-[#e6e0ff] px-6 py-10 shadow-[var(--shadow-soft)] sm:px-10 sm:py-12">
           <div className="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10">
             <div>
               <p className="text-[13px] font-bold uppercase tracking-[0.14em] text-[#5c4d9a]">
@@ -20,7 +20,7 @@ export function SupportSection() {
               <h2 className="font-display mt-2 text-3xl font-bold tracking-[-0.03em] text-[#2d2a2a] sm:text-4xl">
                 {t.supportTitle}
               </h2>
-              <p className="mt-4 max-w-2xl text-[16px] font-medium leading-7 text-[#8a807e]">
+              <p className="mt-4 max-w-2xl text-[16px] font-medium leading-7 text-[#5c5470]">
                 {t.supportBody}
               </p>
 
@@ -34,23 +34,23 @@ export function SupportSection() {
                   <CoffeeIcon />
                   {t.buyCoffee}
                 </Button>
-                <p className="text-center text-[13px] font-medium text-[#8a807e] sm:text-left">
+                <p className="text-center text-[13px] font-medium text-[#5c5470] sm:text-left">
                   {t.supportNote}
                 </p>
               </div>
             </div>
 
-            <div className="relative mx-auto flex w-full max-w-[320px] items-center justify-center sm:max-w-[360px]">
+            <div className="relative mx-auto flex w-full max-w-[300px] items-center justify-center sm:max-w-[340px]">
               <div
-                className="absolute inset-[18%] rounded-full bg-[#ffece6] blur-2xl"
+                className="absolute inset-[14%] rounded-full bg-white/50 blur-2xl"
                 aria-hidden="true"
               />
               <Image
                 src="/mascots/both-dancing.png"
                 alt=""
-                width={360}
-                height={360}
-                className="relative z-10 w-full object-contain animate-float drop-shadow-[0_12px_28px_rgba(0,0,0,0.12)]"
+                width={340}
+                height={340}
+                className="relative z-10 w-full object-contain animate-float drop-shadow-[0_12px_28px_rgba(92,77,154,0.18)]"
               />
             </div>
           </div>
