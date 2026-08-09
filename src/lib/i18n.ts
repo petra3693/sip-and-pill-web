@@ -87,6 +87,30 @@ export type Dictionary = {
   privacyMedicalTitle: string;
   privacyMedicalBody: string;
   backHome: string;
+  supportDeveloper: string;
+  supportCharityBlurb: string;
+  inviteCoffee: string;
+  giveAsYouLike: string;
+  chooseAmount: string;
+  customAmountLabel: string;
+  confirmDonation: string;
+  supportConfirmBlurb: string;
+  donateAmount: string;
+  thankYouSupport: string;
+  hurrah: string;
+  keepGoing: string;
+  cancel: string;
+  back: string;
+  continue: string;
+  aboutIntro: string;
+  aboutStoryTitle: string;
+  aboutStoryBody: string;
+  aboutFreeTitle: string;
+  aboutFreeBody: string;
+  aboutPrivacyTitle: string;
+  aboutPrivacyBody: string;
+  aboutTogetherTitle: string;
+  aboutTogetherBody: string;
 };
 
 const en: Dictionary = {
@@ -163,6 +187,38 @@ const en: Dictionary = {
   privacyMedicalBody:
     "Sip & Pill is provided free of charge for personal wellness tracking. It is not a medical device and does not replace professional medical advice. Use at your own judgment.",
   backHome: "← Back to home",
+  supportDeveloper: "Support Developer",
+  supportCharityBlurb:
+    "Sip & Pill is a charity-minded project — the developer earns nothing from it. It was built on their own time and expense to help others. If you appreciate that and want to support more projects like this, invite them for a coffee.",
+  inviteCoffee: "Invite me for a coffee",
+  giveAsYouLike: "Give as you see fit",
+  chooseAmount: "Choose an amount",
+  customAmountLabel: "Custom amount",
+  confirmDonation: "Confirm your support",
+  supportConfirmBlurb:
+    "You're about to donate {amount}. Thank you for helping keep independent projects like this going!",
+  donateAmount: "Donate {amount}",
+  thankYouSupport: "Thank you for supporting Sip & Pill!",
+  hurrah: "Hurrah!",
+  keepGoing: "Keep it up!",
+  cancel: "Cancel",
+  back: "Back",
+  continue: "Continue",
+  aboutIntro:
+    "A small, personal project with a simple belief: staying hydrated and on top of your meds shouldn’t require an account, ads, or a subscription.",
+  aboutStoryTitle: "It started with people we care about",
+  aboutStoryBody:
+    "Sip & Pill began as a practical companion for friends and family — something calm enough for everyday use, and private enough that health habits stay on your phone. No growth hacks. No data harvest. Just a friendly routine helper.",
+  aboutFreeTitle: "Built to stay free",
+  aboutFreeBody:
+    "This is a charity-minded project. The developer earns nothing from the app. It was made on personal time and expense so anyone can use it without paywalls, banners, or premium locks. If it helps you, that’s already the win.",
+  aboutPrivacyTitle: "Offline by design",
+  aboutPrivacyBody:
+    "Your name, water goals, medications, and logs live only on your device. Nothing is uploaded to a server. You can erase everything anytime. Privacy isn’t a setting here — it’s the default.",
+  aboutTogetherTitle: "A daily companion, not a dashboard",
+  aboutTogetherBody:
+    "We wanted something that feels warm and human: gentle reminders, clear progress, and mascots that make the habit a little lighter. Sip & Pill is here to support your day — quietly, freely, and without noise.",
+
 };
 
 const hu: Dictionary = {
@@ -239,6 +295,38 @@ const hu: Dictionary = {
   privacyMedicalBody:
     "A Sip & Pill ingyenes, személyes wellness követésre készült. Nem orvostechnikai eszköz, és nem helyettesíti a szakmai orvosi tanácsot. Saját belátásod szerint használd.",
   backHome: "← Vissza a főoldalra",
+  supportDeveloper: "Fejlesztő támogatása",
+  supportCharityBlurb:
+    "A Sip & Pill egy charity jellegű projekt — ebből a fejlesztőnek nincs bevétele. Saját idejét és költségét téve bele készült, hogy másokon segítsen. Ha ezt értékeled, és támogatnád a hasonló projekteket, hívj meg egy kávéra.",
+  inviteCoffee: "Hívj meg egy kávéra",
+  giveAsYouLike: "Tegy belátásod szerint",
+  chooseAmount: "Válassz összeget",
+  customAmountLabel: "Egyedi összeg",
+  confirmDonation: "Erősítsd meg a támogatást",
+  supportConfirmBlurb:
+    "Éppen {amount} támogatást adsz. Köszönjük, hogy segíted a hasonló független projektek fennmaradását!",
+  donateAmount: "Adományozás: {amount}",
+  thankYouSupport: "Köszönjük, hogy támogatod a Sip & Pill-t!",
+  hurrah: "Hurrá!",
+  keepGoing: "Csak így tovább!",
+  cancel: "Mégse",
+  back: "Vissza",
+  continue: "Folytatás",
+  aboutIntro:
+    "Egy kis, személyes projekt egy egyszerű hittel: a hidratálás és a gyógyszerek követése ne igényeljen fiókot, reklámot vagy előfizetést.",
+  aboutStoryTitle: "Azokkal kezdődött, akik fontosak nekünk",
+  aboutStoryBody:
+    "A Sip & Pill barátoknak és családnak készült gyakorlati társnak indult — elég nyugodt a mindennapokra, és elég privát ahhoz, hogy az egészségügyi szokások a telefonodon maradjanak. Nincs növekedési trükk. Nincs adatgyűjtés. Csak egy barátságos rutinsegítő.",
+  aboutFreeTitle: "Ingyenesnek született",
+  aboutFreeBody:
+    "Ez egy charity jellegű projekt. A fejlesztő az appból nem keres. Saját időből és költségből készült, hogy bárki használhassa fizetőfalak, bannerek vagy prémium zárak nélkül. Ha segít, az már a győzelem.",
+  aboutPrivacyTitle: "Offline a tervezés alapja",
+  aboutPrivacyBody:
+    "A neved, vízcéljaid, gyógyszereid és naplóid csak az eszközödön élnek. Semmi sem kerül szerverre. Bármikor mindent törölhetsz. A magánélet itt nem egy beállítás — ez az alapértelmezés.",
+  aboutTogetherTitle: "Napi társ, nem irányítópult",
+  aboutTogetherBody:
+    "Valami meleg és emberi dolgot akartunk: gyengéd emlékeztetőket, tiszta progresszt, és kabalákat, amelyek egy kicsit könnyebbé teszik a szokást. A Sip & Pill a napodat támogatja — csendesen, szabadon, zaj nélkül.",
+
 };
 
 const es: Dictionary = {
@@ -315,6 +403,38 @@ const es: Dictionary = {
   privacyMedicalBody:
     "Sip & Pill se ofrece gratis para el seguimiento personal del bienestar. No es un dispositivo médico y no sustituye el consejo médico profesional. Úsalo según tu propio criterio.",
   backHome: "← Volver al inicio",
+  supportDeveloper: "Apoyar al desarrollador",
+  supportCharityBlurb:
+    "Sip & Pill es un proyecto con espíritu solidario — el desarrollador no gana nada con ello. Se construyó con su propio tiempo y recursos para ayudar a otros. Si lo aprecias y quieres apoyar más proyectos así, invítalo a un café.",
+  inviteCoffee: "Invítame a un café",
+  giveAsYouLike: "Da lo que te parezca bien",
+  chooseAmount: "Elige una cantidad",
+  customAmountLabel: "Cantidad personalizada",
+  confirmDonation: "Confirma tu apoyo",
+  supportConfirmBlurb:
+    "Estás a punto de donar {amount}. ¡Gracias por ayudar a que proyectos independientes como este sigan adelante!",
+  donateAmount: "Donar {amount}",
+  thankYouSupport: "¡Gracias por apoyar Sip & Pill!",
+  hurrah: "¡Hurra!",
+  keepGoing: "¡Sigue así!",
+  cancel: "Cancelar",
+  back: "Atrás",
+  continue: "Continuar",
+  aboutIntro:
+    "Un proyecto pequeño y personal con una idea simple: mantenerte hidratado y al día con tus medicamentos no debería exigir una cuenta, anuncios ni una suscripción.",
+  aboutStoryTitle: "Empezó con personas que nos importan",
+  aboutStoryBody:
+    "Sip & Pill nació como un compañero práctico para amigos y familia — lo bastante calmado para el día a día, y lo bastante privado para que tus hábitos de salud se queden en el teléfono. Sin trucos de crecimiento. Sin cosecha de datos. Solo un ayudante amable para la rutina.",
+  aboutFreeTitle: "Hecho para seguir gratis",
+  aboutFreeBody:
+    "Es un proyecto con espíritu solidario. El desarrollador no gana nada con la app. Se hizo con tiempo y recursos personales para que cualquiera pueda usarla sin muros de pago, banners ni bloqueos premium. Si te ayuda, eso ya es la victoria.",
+  aboutPrivacyTitle: "Offline por diseño",
+  aboutPrivacyBody:
+    "Tu nombre, metas de agua, medicamentos y registros viven solo en tu dispositivo. Nada se sube a un servidor. Puedes borrar todo en cualquier momento. La privacidad aquí no es un ajuste — es el valor predeterminado.",
+  aboutTogetherTitle: "Un compañero diario, no un panel",
+  aboutTogetherBody:
+    "Queríamos algo cálido y humano: recordatorios suaves, progreso claro y mascotas que hagan el hábito un poco más ligero. Sip & Pill está aquí para acompañar tu día — en silencio, libremente y sin ruido.",
+
 };
 
 const fr: Dictionary = {
@@ -391,6 +511,38 @@ const fr: Dictionary = {
   privacyMedicalBody:
     "Sip & Pill est fourni gratuitement pour le suivi du bien-être personnel. Ce n’est pas un dispositif médical et ne remplace pas un avis médical professionnel. Utilisez-le selon votre jugement.",
   backHome: "← Retour à l’accueil",
+  supportDeveloper: "Soutenir le développeur",
+  supportCharityBlurb:
+    "Sip & Pill est un projet à esprit caritatif — le développeur n’en tire aucun revenu. Il a été créé sur son temps et ses frais pour aider les autres. Si vous l’appréciez et voulez soutenir d’autres projets comme celui-ci, offrez-lui un café.",
+  inviteCoffee: "Offrez-moi un café",
+  giveAsYouLike: "Donnez selon votre envie",
+  chooseAmount: "Choisissez un montant",
+  customAmountLabel: "Montant personnalisé",
+  confirmDonation: "Confirmez votre soutien",
+  supportConfirmBlurb:
+    "Vous êtes sur le point de donner {amount}. Merci d’aider des projets indépendants comme celui-ci à continuer !",
+  donateAmount: "Donner {amount}",
+  thankYouSupport: "Merci de soutenir Sip & Pill !",
+  hurrah: "Hourra !",
+  keepGoing: "Continuez comme ça !",
+  cancel: "Annuler",
+  back: "Retour",
+  continue: "Continuer",
+  aboutIntro:
+    "Un petit projet personnel avec une conviction simple : rester hydraté et à jour avec ses médicaments ne devrait pas exiger de compte, de publicité ou d’abonnement.",
+  aboutStoryTitle: "Tout a commencé avec des proches",
+  aboutStoryBody:
+    "Sip & Pill est né comme un compagnon pratique pour la famille et les amis — assez calme pour le quotidien, et assez privé pour que les habitudes de santé restent sur votre téléphone. Pas d’astuces de croissance. Pas de collecte de données. Juste une aide amicale pour la routine.",
+  aboutFreeTitle: "Conçu pour rester gratuit",
+  aboutFreeBody:
+    "C’est un projet à esprit caritatif. Le développeur ne gagne rien avec l’app. Elle a été faite sur du temps et des frais personnels pour que chacun puisse l’utiliser sans paywall, bannières ni verrous premium. Si elle vous aide, c’est déjà une victoire.",
+  aboutPrivacyTitle: "Hors ligne par conception",
+  aboutPrivacyBody:
+    "Votre nom, objectifs d’eau, médicaments et journaux vivent uniquement sur votre appareil. Rien n’est envoyé sur un serveur. Vous pouvez tout effacer à tout moment. Ici, la confidentialité n’est pas un réglage — c’est la valeur par défaut.",
+  aboutTogetherTitle: "Un compagnon quotidien, pas un tableau de bord",
+  aboutTogetherBody:
+    "Nous voulions quelque chose de chaleureux et humain : des rappels doux, des progrès clairs, et des mascottes qui allègent un peu l’habitude. Sip & Pill est là pour accompagner votre journée — en silence, librement, sans bruit.",
+
 };
 
 const de: Dictionary = {
@@ -467,6 +619,38 @@ const de: Dictionary = {
   privacyMedicalBody:
     "Sip & Pill ist kostenlos für persönliches Wellness-Tracking. Es ist kein Medizinprodukt und ersetzt keinen professionellen medizinischen Rat. Nutze es nach eigenem Ermessen.",
   backHome: "← Zurück zur Startseite",
+  supportDeveloper: "Entwickler unterstützen",
+  supportCharityBlurb:
+    "Sip & Pill ist ein Charity-Projekt — der Entwickler verdient nichts damit. Es entstand in eigener Zeit und auf eigene Kosten, um anderen zu helfen. Wenn du das schätzt und ähnliche Projekte unterstützen möchtest, lad ihn auf einen Kaffee ein.",
+  inviteCoffee: "Lad mich auf einen Kaffee ein",
+  giveAsYouLike: "Gib, was dir richtig erscheint",
+  chooseAmount: "Betrag wählen",
+  customAmountLabel: "Eigener Betrag",
+  confirmDonation: "Unterstützung bestätigen",
+  supportConfirmBlurb:
+    "Du bist dabei, {amount} zu spenden. Danke, dass du unabhängige Projekte wie dieses am Leben hältst!",
+  donateAmount: "{amount} spenden",
+  thankYouSupport: "Danke, dass du Sip & Pill unterstützt!",
+  hurrah: "Hurra!",
+  keepGoing: "Weiter so!",
+  cancel: "Abbrechen",
+  back: "Zurück",
+  continue: "Weiter",
+  aboutIntro:
+    "Ein kleines, persönliches Projekt mit einer einfachen Überzeugung: hydriert bleiben und Medikamente im Blick behalten sollte kein Konto, keine Werbung und kein Abo verlangen.",
+  aboutStoryTitle: "Es begann mit Menschen, die uns wichtig sind",
+  aboutStoryBody:
+    "Sip & Pill begann als praktischer Begleiter für Freunde und Familie — ruhig genug für den Alltag und privat genug, dass Gesundheitsgewohnheiten auf dem Telefon bleiben. Keine Growth-Hacks. Keine Datenernte. Nur ein freundlicher Routinehelfer.",
+  aboutFreeTitle: "Gebaut, um frei zu bleiben",
+  aboutFreeBody:
+    "Das ist ein Charity-Projekt. Der Entwickler verdient nichts mit der App. Sie entstand in persönlicher Zeit und auf eigene Kosten, damit jeder sie ohne Paywalls, Banner oder Premium-Sperren nutzen kann. Wenn sie hilft, ist das schon der Gewinn.",
+  aboutPrivacyTitle: "Offline by Design",
+  aboutPrivacyBody:
+    "Dein Name, Wasserziele, Medikamente und Logs leben nur auf deinem Gerät. Nichts wird auf einen Server hochgeladen. Du kannst jederzeit alles löschen. Privatsphäre ist hier keine Einstellung — sie ist der Standard.",
+  aboutTogetherTitle: "Ein täglicher Begleiter, kein Dashboard",
+  aboutTogetherBody:
+    "Wir wollten etwas Warmes und Menschliches: sanfte Erinnerungen, klaren Fortschritt und Maskottchen, die die Gewohnheit leichter machen. Sip & Pill begleitet deinen Tag — leise, frei und ohne Lärm.",
+
 };
 
 const it: Dictionary = {
@@ -543,6 +727,38 @@ const it: Dictionary = {
   privacyMedicalBody:
     "Sip & Pill è fornito gratuitamente per il tracking del benessere personale. Non è un dispositivo medico e non sostituisce il consiglio medico professionale. Usalo secondo il tuo giudizio.",
   backHome: "← Torna alla home",
+  supportDeveloper: "Sostieni lo sviluppatore",
+  supportCharityBlurb:
+    "Sip & Pill è un progetto con spirito solidale — lo sviluppatore non ci guadagna. È stato creato con tempo e risorse proprie per aiutare gli altri. Se lo apprezzi e vuoi sostenere altri progetti così, offrigli un caffè.",
+  inviteCoffee: "Offrimi un caffè",
+  giveAsYouLike: "Dai quanto ritieni giusto",
+  chooseAmount: "Scegli un importo",
+  customAmountLabel: "Importo personalizzato",
+  confirmDonation: "Conferma il tuo supporto",
+  supportConfirmBlurb:
+    "Stai per donare {amount}. Grazie per aiutare progetti indipendenti come questo a continuare!",
+  donateAmount: "Dona {amount}",
+  thankYouSupport: "Grazie per aver sostenuto Sip & Pill!",
+  hurrah: "Evviva!",
+  keepGoing: "Continua così!",
+  cancel: "Annulla",
+  back: "Indietro",
+  continue: "Continua",
+  aboutIntro:
+    "Un piccolo progetto personale con una convinzione semplice: restare idratati e al passo con i farmaci non dovrebbe richiedere un account, pubblicità o un abbonamento.",
+  aboutStoryTitle: "È iniziato con le persone a cui teniamo",
+  aboutStoryBody:
+    "Sip & Pill è nato come un compagno pratico per amici e famiglia — abbastanza calmo per l’uso quotidiano, e abbastanza privato perché le abitudini di salute restino sul telefono. Niente trucchi di crescita. Niente raccolta dati. Solo un aiuto amichevole per la routine.",
+  aboutFreeTitle: "Fatto per restare gratuito",
+  aboutFreeBody:
+    "È un progetto con spirito solidale. Lo sviluppatore non guadagna nulla dall’app. È stata creata con tempo e risorse personali così chiunque possa usarla senza paywall, banner o blocchi premium. Se ti aiuta, questa è già la vittoria.",
+  aboutPrivacyTitle: "Offline by design",
+  aboutPrivacyBody:
+    "Il tuo nome, obiettivi d’acqua, farmaci e registri vivono solo sul dispositivo. Niente viene caricato su un server. Puoi cancellare tutto in qualsiasi momento. La privacy qui non è un’impostazione — è il valore predefinito.",
+  aboutTogetherTitle: "Un compagno quotidiano, non una dashboard",
+  aboutTogetherBody:
+    "Volevamo qualcosa di caldo e umano: promemoria gentili, progressi chiari e mascotte che alleggeriscono l’abitudine. Sip & Pill è qui per sostenere la tua giornata — in silenzio, liberamente e senza rumore.",
+
 };
 
 const pt: Dictionary = {
@@ -619,6 +835,38 @@ const pt: Dictionary = {
   privacyMedicalBody:
     "O Sip & Pill é gratuito para acompanhamento pessoal de bem-estar. Não é um dispositivo médico e não substitui aconselhamento médico profissional. Use segundo seu próprio julgamento.",
   backHome: "← Voltar ao início",
+  supportDeveloper: "Apoiar o desenvolvedor",
+  supportCharityBlurb:
+    "O Sip & Pill é um projeto com espírito solidário — o desenvolvedor não ganha nada com ele. Foi feito com tempo e recursos próprios para ajudar os outros. Se você valoriza isso e quer apoiar mais projetos assim, convide-o para um café.",
+  inviteCoffee: "Me convide para um café",
+  giveAsYouLike: "Dê o que achar justo",
+  chooseAmount: "Escolha um valor",
+  customAmountLabel: "Valor personalizado",
+  confirmDonation: "Confirme seu apoio",
+  supportConfirmBlurb:
+    "Você está prestes a doar {amount}. Obrigado por ajudar projetos independentes como este a continuar!",
+  donateAmount: "Doar {amount}",
+  thankYouSupport: "Obrigado por apoiar o Sip & Pill!",
+  hurrah: "Viva!",
+  keepGoing: "Continue assim!",
+  cancel: "Cancelar",
+  back: "Voltar",
+  continue: "Continuar",
+  aboutIntro:
+    "Um projeto pequeno e pessoal com uma crença simples: manter-se hidratado e em dia com os remédios não deveria exigir conta, anúncios ou assinatura.",
+  aboutStoryTitle: "Começou com pessoas de quem cuidamos",
+  aboutStoryBody:
+    "O Sip & Pill nasceu como um companheiro prático para amigos e família — calmo o bastante para o dia a dia, e privado o bastante para que hábitos de saúde fiquem no telefone. Sem truques de crescimento. Sem coleta de dados. Só um ajudante amigável para a rotina.",
+  aboutFreeTitle: "Feito para continuar gratuito",
+  aboutFreeBody:
+    "É um projeto com espírito solidário. O desenvolvedor não ganha nada com o app. Foi feito com tempo e recursos pessoais para que qualquer pessoa possa usar sem paywalls, banners ou bloqueios premium. Se ajuda você, essa já é a vitória.",
+  aboutPrivacyTitle: "Offline por design",
+  aboutPrivacyBody:
+    "Seu nome, metas de água, medicamentos e registros vivem só no seu dispositivo. Nada é enviado a um servidor. Você pode apagar tudo a qualquer momento. Privacidade aqui não é uma configuração — é o padrão.",
+  aboutTogetherTitle: "Um companheiro diário, não um painel",
+  aboutTogetherBody:
+    "Queríamos algo acolhedor e humano: lembretes suaves, progresso claro e mascotes que deixam o hábito um pouco mais leve. O Sip & Pill está aqui para apoiar o seu dia — em silêncio, livremente e sem barulho.",
+
 };
 
 const ja: Dictionary = {
@@ -692,6 +940,38 @@ const ja: Dictionary = {
   privacyMedicalBody:
     "Sip & Pill は個人のウェルネス記録用に無料で提供されます。医療機器ではなく、専門的な医療助言の代わりにはなりません。ご自身の判断でご利用ください。",
   backHome: "← ホームに戻る",
+  supportDeveloper: "開発者を応援する",
+  supportCharityBlurb:
+    "Sip & Pill はチャリティ精神のプロジェクトで、開発者の収益はありません。誰かの役に立つために、自分の時間と費用で作りました。それを応援したい、同じようなプロジェクトを支えたいと思ったら、コーヒーをおごってください。",
+  inviteCoffee: "コーヒーをおごる",
+  giveAsYouLike: "気持ちのままに",
+  chooseAmount: "金額を選ぶ",
+  customAmountLabel: "カスタム金額",
+  confirmDonation: "サポートを確認",
+  supportConfirmBlurb:
+    "{amount} を寄付しようとしています。このような独立したプロジェクトの継続を支えてくれてありがとう！",
+  donateAmount: "{amount} を寄付する",
+  thankYouSupport: "Sip & Pill を応援してくれてありがとう！",
+  hurrah: "やった！",
+  keepGoing: "その調子！",
+  cancel: "キャンセル",
+  back: "戻る",
+  continue: "続ける",
+  aboutIntro:
+    "小さな個人プロジェクトと、シンプルな信念：水分補給と服薬管理に、アカウントも広告もサブスクもいらないはず。",
+  aboutStoryTitle: "大切な人たちから始まった",
+  aboutStoryBody:
+    "Sip & Pill は、友人や家族のための実用的な相棒として始まりました — 毎日使いやすく、健康習慣は電話の中だけに残るプライバシー。成長ハックもデータ収集もありません。ただの、やさしいルーティンヘルパーです。",
+  aboutFreeTitle: "無料であり続けるために",
+  aboutFreeBody:
+    "チャリティ精神のプロジェクトです。開発者はこのアプリから収益を得ません。ペイウォールもバナーもプレミアム制限もなく誰でも使えるよう、個人の時間と費用で作りました。役に立てば、それがすでに勝利です。",
+  aboutPrivacyTitle: "設計からオフライン",
+  aboutPrivacyBody:
+    "名前、水分目標、お薬、記録は端末の中だけにあります。サーバーには何もアップロードしません。いつでもすべて消去できます。プライバシーは設定ではなく、ここでの標準です。",
+  aboutTogetherTitle: "ダッシュボードではなく、毎日の相棒",
+  aboutTogetherBody:
+    "温かく人間らしいものを目指しました：やさしいリマインダー、わかりやすい進捗、習慣を少し軽くするマスコット。Sip & Pill はあなたの一日を支えます — 静かに、自由に、ノイズなく。",
+
 };
 
 const ko: Dictionary = {
@@ -766,6 +1046,38 @@ const ko: Dictionary = {
   privacyMedicalBody:
     "Sip & Pill은 개인 웰니스 추적용으로 무료 제공됩니다. 의료기기가 아니며 전문 의료 조언을 대체하지 않습니다. 본인 판단에 따라 사용하세요.",
   backHome: "← 홈으로 돌아가기",
+  supportDeveloper: "개발자 응원하기",
+  supportCharityBlurb:
+    "Sip & Pill은 자선 정신의 프로젝트로 — 개발자는 수익을 얻지 않습니다. 다른 사람을 돕기 위해 본인의 시간과 비용으로 만들었습니다. 이를 소중히 여기고 비슷한 프로젝트를 응원하고 싶다면, 커피 한 잔을 사 주세요.",
+  inviteCoffee: "커피 한 잔 사주기",
+  giveAsYouLike: "원하는 만큼 주세요",
+  chooseAmount: "금액 선택",
+  customAmountLabel: "직접 입력",
+  confirmDonation: "후원 확인",
+  supportConfirmBlurb:
+    "{amount}을(를) 기부하려고 합니다. 이런 독립 프로젝트가 이어지도록 도와주셔서 감사합니다!",
+  donateAmount: "{amount} 기부하기",
+  thankYouSupport: "Sip & Pill을 응원해 주셔서 감사합니다!",
+  hurrah: "만세!",
+  keepGoing: "계속 응원해요!",
+  cancel: "취소",
+  back: "뒤로",
+  continue: "계속",
+  aboutIntro:
+    "작은 개인 프로젝트와 단순한 믿음: 수분 보충과 복약 관리에 계정, 광고, 구독이 필요하지 않아야 합니다.",
+  aboutStoryTitle: "아끼는 사람들에서 시작됐어요",
+  aboutStoryBody:
+    "Sip & Pill은 친구와 가족을 위한 실용적인 동반자로 시작했습니다 — 매일 쓰기 충분할 만큼 차분하고, 건강 습관이 휴대폰에만 남을 만큼 프라이빗하게. 성장 해킹도, 데이터 수집도 없습니다. 그저 친근한 루틴 도우미입니다.",
+  aboutFreeTitle: "무료로 남을 수 있게",
+  aboutFreeBody:
+    "자선 정신의 프로젝트입니다. 개발자는 앱에서 수익을 얻지 않습니다. 페이월, 배너, 프리미엄 잠금 없이 누구나 쓸 수 있도록 개인 시간과 비용으로 만들었습니다. 도움이 된다면, 그게 이미 승리입니다.",
+  aboutPrivacyTitle: "설계부터 오프라인",
+  aboutPrivacyBody:
+    "이름, 수분 목표, 약, 기록은 기기에만 있습니다. 서버로 업로드되지 않습니다. 언제든 모두 지울 수 있습니다. 여기서 프라이버시는 설정이 아니라 — 기본값입니다.",
+  aboutTogetherTitle: "대시보드가 아닌, 매일의 동반자",
+  aboutTogetherBody:
+    "따뜻하고 인간적인 느낌을 원했습니다: 부드러운 알림, 분명한 진행, 습관을 조금 더 가볍게 만드는 마스코트. Sip & Pill은 당신의 하루를 돕습니다 — 조용히, 자유롭게, 소음 없이.",
+
 };
 
 export const DICTIONARIES: Record<LocaleCode, Dictionary> = {

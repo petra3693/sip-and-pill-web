@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useDonation } from "@/components/DonationProvider";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLocale } from "@/components/LocaleProvider";
 import { useTheme } from "@/components/ThemeProvider";
@@ -9,6 +10,7 @@ import { useTheme } from "@/components/ThemeProvider";
 export function SiteHeader() {
   const { theme, toggleTheme } = useTheme();
   const { t } = useLocale();
+  const { openDonation } = useDonation();
 
   return (
     <header className="sticky top-0 z-40 border-b border-[var(--card-border)] bg-[var(--header-bg)] backdrop-blur-xl">
@@ -34,9 +36,13 @@ export function SiteHeader() {
           <a href="#about" className="transition hover:text-[var(--purple)]">
             {t.navAbout}
           </a>
-          <a href="#support" className="transition hover:text-[var(--purple)]">
+          <button
+            type="button"
+            onClick={openDonation}
+            className="transition hover:text-[var(--purple)]"
+          >
             {t.navSupport}
-          </a>
+          </button>
         </nav>
 
         <div className="flex items-center gap-2">

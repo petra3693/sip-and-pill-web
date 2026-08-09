@@ -2,11 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useDonation } from "@/components/DonationProvider";
 import { useLocale } from "@/components/LocaleProvider";
-import { DONATION_URL, SUPPORT_EMAIL } from "@/lib/links";
+import { SUPPORT_EMAIL } from "@/lib/links";
 
 export function SiteFooter() {
   const { t } = useLocale();
+  const { openDonation } = useDonation();
   const year = new Date().getFullYear();
 
   return (
@@ -37,14 +39,13 @@ export function SiteFooter() {
           >
             {t.contact}
           </a>
-          <a
-            href={DONATION_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={openDonation}
             className="text-[var(--footer-muted)] transition hover:text-white"
           >
             {t.support}
-          </a>
+          </button>
           <Link
             href="/privacy"
             className="text-[var(--footer-muted)] transition hover:text-white"

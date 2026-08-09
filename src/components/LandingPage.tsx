@@ -3,7 +3,6 @@ import { FeaturesSection } from "@/components/FeaturesSection";
 import { HeroSection } from "@/components/HeroSection";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import { SupportSection } from "@/components/SupportSection";
 
 export function LandingPage() {
   return (
@@ -13,7 +12,6 @@ export function LandingPage() {
         <HeroSection />
         <FeaturesSection />
         <AboutSection />
-        <SupportSection />
       </main>
       <SiteFooter />
     </div>
