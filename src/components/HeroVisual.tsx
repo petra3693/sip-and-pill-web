@@ -4,36 +4,26 @@ import Image from "next/image";
 import { AppMockup } from "@/components/AppMockup";
 
 /**
- * Brand-style hero huddle: Drop behind left, phone center, Pill in front right.
- * One floating group — no mismatched phone-frame composites.
+ * Drop (left) + Pill (right) hug the phone exactly.
+ * Both mascot layers sit ABOVE the app so their hands rest on the screen.
  */
 export function HeroVisual() {
   return (
-    <div className="relative mx-auto w-full max-w-[480px] sm:max-w-[520px]">
+    <div className="relative mx-auto w-full max-w-[520px]">
       <div
         className="pointer-events-none absolute left-1/2 top-1/2 h-[75%] w-[75%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
         style={{
           background:
-            "radial-gradient(circle, rgba(255,126,112,0.3) 0%, rgba(126,200,245,0.2) 40%, rgba(92,77,154,0.18) 60%, transparent 72%)",
+            "radial-gradient(circle, rgba(255,126,112,0.28) 0%, rgba(126,200,245,0.2) 40%, rgba(92,77,154,0.16) 60%, transparent 72%)",
         }}
         aria-hidden="true"
       />
 
       <Sparkles />
 
-      <div className="relative mx-auto aspect-[4/5] w-full max-w-[420px] animate-float sm:max-w-[460px]">
-        {/* Drop — larger, sits behind the phone */}
-        <Image
-          src="/mascots/drop-hugging.png"
-          alt=""
-          width={480}
-          height={480}
-          priority
-          className="pointer-events-none absolute -left-[12%] top-[6%] z-[1] w-[58%] select-none drop-shadow-[0_18px_36px_rgba(0,0,0,0.35)] sm:-left-[14%] sm:w-[60%]"
-        />
-
-        {/* Phone */}
-        <div className="absolute left-1/2 top-[4%] z-[2] w-[58%] max-w-[270px] -translate-x-1/2 sm:w-[56%] sm:max-w-[290px]">
+      <div className="relative mx-auto flex w-full max-w-[300px] items-center justify-center animate-float py-2 sm:max-w-[320px]">
+        {/* Phone — under the mascots */}
+        <div className="relative z-[1] w-full">
           <div className="overflow-hidden rounded-[34px] bg-[#1a1428] p-[6px] shadow-[0_28px_60px_rgba(0,0,0,0.45)] ring-1 ring-white/10">
             <div className="aspect-[9/19] overflow-hidden rounded-[28px] bg-[#fff8f6]">
               <AppMockup fill />
@@ -41,14 +31,26 @@ export function HeroVisual() {
           </div>
         </div>
 
-        {/* Pill — larger, in front on the right */}
+        {/* Drop — left, above app; flat edge on phone left, hand overlaps onto screen */}
         <Image
-          src="/mascots/pill-hugging.png"
+          src="/mascots/drop-peek-left.png"
           alt=""
-          width={480}
-          height={480}
+          width={421}
+          height={620}
           priority
-          className="pointer-events-none absolute -right-[12%] top-[10%] z-[3] w-[56%] select-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)] sm:-right-[14%] sm:w-[58%]"
+          unoptimized
+          className="pointer-events-none absolute top-[7%] right-full z-[2] h-[86%] w-auto max-w-none translate-x-[16%] select-none drop-shadow-[0_14px_24px_rgba(0,0,0,0.28)]"
+        />
+
+        {/* Pill — right, above app; flat edge on phone right, hand overlaps onto screen */}
+        <Image
+          src="/mascots/pill-peek-right.png"
+          alt=""
+          width={425}
+          height={664}
+          priority
+          unoptimized
+          className="pointer-events-none absolute top-[5%] left-full z-[2] h-[90%] w-auto max-w-none -translate-x-[16%] select-none drop-shadow-[0_14px_24px_rgba(0,0,0,0.28)]"
         />
       </div>
     </div>
@@ -57,12 +59,12 @@ export function HeroVisual() {
 
 function Sparkles() {
   const dots = [
-    "left-[8%] top-[12%]",
-    "right-[10%] top-[8%]",
-    "left-[4%] bottom-[20%]",
-    "right-[6%] bottom-[16%]",
-    "left-[20%] top-[40%]",
-    "right-[18%] top-[36%]",
+    "left-[6%] top-[14%]",
+    "right-[8%] top-[10%]",
+    "left-[2%] bottom-[18%]",
+    "right-[4%] bottom-[14%]",
+    "left-[14%] top-[40%]",
+    "right-[12%] top-[36%]",
   ];
 
   return (
