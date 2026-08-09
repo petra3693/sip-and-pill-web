@@ -1,79 +1,79 @@
 @import "tailwindcss";
 
-/* Brand direction matches the dark hero mockup; light mode stays soft. */
+/* Aligned with Sip & Pill app brand: peach, purple, coral + soft water blue. */
 :root {
-  --bg-peach: #f4f7fb;
-  --bg-peach-deep: #e8eef7;
-  --coral: #ff7e70;
-  --coral-soft: #ff9a8f;
-  --coral-muted: rgba(255, 126, 112, 0.16);
-  --sip-blue: #7ec8f5;
-  --purple: #6b5fb3;
-  --indigo: #6b5fb3;
-  --indigo-deep: #4f4490;
-  --ink: #1a2030;
-  --muted: #6b7385;
+  --bg-peach: #fff8f6;
+  --bg-peach-deep: #fbeae5;
+  --coral: #ff6b52;
+  --coral-soft: #ff6b6b;
+  --coral-muted: #ffece6;
+  --sip-blue: #5bb8e8;
+  --purple: #5c4d9a;
+  --indigo: #5c4d9a;
+  --indigo-deep: #4a3d82;
+  --ink: #2d2a2a;
+  --muted: #8a807e;
   --success: #78c193;
-  --border: #d5dbe6;
+  --border: #d1cfce;
   --surface: #ffffff;
   --tip: #e6e0ff;
   --yellow: #ffc72c;
   --cream: #fff9db;
   --privacy: #eef8f2;
-  --background: #f4f7fb;
-  --foreground: #1a2030;
+  --background: #fff8f6;
+  --foreground: #2d2a2a;
   --card: #ffffff;
-  --card-border: #e4e9f1;
-  --header-bg: rgba(244, 247, 251, 0.84);
-  --shadow-soft: 0 8px 20px rgba(26, 32, 48, 0.08);
-  --shadow-lift: 0 22px 48px rgba(26, 32, 48, 0.14);
-  --screen-gradient: linear-gradient(245deg, #f4f7fb 20%, #e8eef7 80%);
+  --card-border: #f2e8e4;
+  --header-bg: rgba(255, 248, 246, 0.86);
+  --shadow-soft: 0 8px 16px rgba(92, 77, 154, 0.08);
+  --shadow-lift: 0 18px 40px rgba(26, 20, 40, 0.12);
+  --screen-gradient: linear-gradient(245deg, #fff8f6 25%, #fbeae5 75%);
   --hero-glow: radial-gradient(
-    ellipse 70% 55% at 70% 35%,
-    rgba(255, 126, 112, 0.18),
-    rgba(126, 200, 245, 0.12) 40%,
+    ellipse 70% 55% at 72% 30%,
+    rgba(255, 107, 82, 0.16),
+    rgba(91, 184, 232, 0.12) 42%,
     transparent 68%
   );
-  --footer-bg: #0b1020;
-  --footer-fg: #eef2ff;
-  --footer-muted: rgba(238, 242, 255, 0.68);
+  --footer-bg: #1a1428;
+  --footer-fg: #eeecf7;
+  --footer-muted: rgba(238, 236, 247, 0.72);
 }
 
 .dark {
-  --bg-peach: #12182b;
+  --bg-peach: #0f172a;
   --bg-peach-deep: #1a2238;
-  --coral: #ff7e70;
-  --coral-soft: #ff9a8f;
-  --coral-muted: rgba(255, 126, 112, 0.18);
+  --coral: #ff7a64;
+  --coral-soft: #ff8a8a;
+  --coral-muted: rgba(255, 107, 82, 0.18);
   --sip-blue: #7ec8f5;
-  --purple: #a598e0;
-  --indigo: #a598e0;
+  --purple: #9b8fd4;
+  --indigo: #9b8fd4;
   --indigo-deep: #7e70b8;
-  --ink: #f4f6fb;
-  --muted: #a7b0c3;
+  --ink: #f7f4f2;
+  --muted: #b5adaa;
   --success: #8fd0a6;
   --border: #2c3550;
   --surface: #1a2238;
-  --tip: rgba(165, 152, 224, 0.2);
+  --tip: rgba(156, 143, 212, 0.22);
   --yellow: #ffd45c;
   --cream: #3a3220;
   --privacy: rgba(120, 193, 147, 0.16);
-  --background: #0b1020;
-  --foreground: #f4f6fb;
+  --background: #0f172a;
+  --foreground: #f7f4f2;
   --card: #151c30;
   --card-border: #27314a;
-  --header-bg: rgba(11, 16, 32, 0.82);
+  --header-bg: rgba(15, 23, 42, 0.86);
   --shadow-soft: 0 8px 22px rgba(0, 0, 0, 0.35);
   --shadow-lift: 0 24px 56px rgba(0, 0, 0, 0.5);
   --screen-gradient: radial-gradient(
       ellipse 90% 70% at 50% -10%,
-      rgba(80, 70, 140, 0.35),
+      rgba(92, 77, 154, 0.32),
       transparent 55%
     ),
-    linear-gradient(180deg, #0b1020 0%, #12182b 55%, #0b1020 100%);
+    linear-gradient(180deg, #0f172a 0%, #151c30 55%, #0f172a 100%);
   --hero-glow: radial-gradient(
     ellipse 70% 60% at 72% 40%,
-    rgba(255, 126, 112, 0.22),
+    rgba(255, 126, 112, 0.2),
     rgba(92, 77, 154, 0.28) 40%,
     transparent 70%
   );
@@ -181,6 +181,15 @@ input {
 
 .dark .mascot-cutout {
   mix-blend-mode: screen;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/Button";
 import { useDonation } from "@/components/DonationProvider";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLocale } from "@/components/LocaleProvider";
@@ -14,7 +15,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-[var(--card-border)] bg-[var(--header-bg)] backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-5 sm:px-8">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-5 sm:h-[4.25rem] sm:px-8">
         <Link href="/" className="flex min-w-0 items-center gap-2.5">
           <Image
             src="/icon.png"
@@ -29,20 +30,19 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-7 text-[14px] font-semibold text-[var(--muted)] md:flex">
+        <nav className="hidden items-center gap-6 text-[14px] font-semibold text-[var(--muted)] lg:flex">
+          <a href="#values" className="transition hover:text-[var(--purple)]">
+            {t.navValues}
+          </a>
           <a href="#features" className="transition hover:text-[var(--purple)]">
             {t.navFeatures}
           </a>
-          <a href="#about" className="transition hover:text-[var(--purple)]">
-            {t.navAbout}
+          <a href="#story" className="transition hover:text-[var(--purple)]">
+            {t.navStory}
           </a>
-          <button
-            type="button"
-            onClick={openDonation}
-            className="transition hover:text-[var(--purple)]"
-          >
+          <a href="#support" className="transition hover:text-[var(--purple)]">
             {t.navSupport}
-          </button>
+          </a>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -55,6 +55,13 @@ export function SiteHeader() {
           >
             {theme === "light" ? <MoonIcon /> : <SunIcon />}
           </button>
+          <Button
+            onClick={openDonation}
+            className="h-11 px-3 text-[13px] sm:px-4 sm:text-[14px]"
+          >
+            <span className="hidden md:inline">{t.supportProjectCta}</span>
+            <span className="md:hidden">{t.navSupport} ☕</span>
+          </Button>
         </div>
       </div>
     </header>

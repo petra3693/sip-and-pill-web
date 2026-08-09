@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useDonation } from "@/components/DonationProvider";
 import { useLocale } from "@/components/LocaleProvider";
-import { SUPPORT_EMAIL } from "@/lib/links";
+import { GITHUB_URL, SUPPORT_EMAIL } from "@/lib/links";
 
 export function SiteFooter() {
   const { t } = useLocale();
@@ -30,6 +30,9 @@ export function SiteFooter() {
           <p className="mt-3 text-[14px] font-medium leading-6 text-[var(--footer-muted)]">
             {t.footerTagline}
           </p>
+          <p className="mt-3 text-[13px] font-semibold text-[var(--footer-muted)]">
+            {t.footerPrivacyLine}
+          </p>
         </div>
 
         <div className="flex flex-wrap gap-x-8 gap-y-3 text-[14px] font-semibold">
@@ -52,6 +55,20 @@ export function SiteFooter() {
           >
             {t.privacy}
           </Link>
+          <Link
+            href="/terms"
+            className="text-[var(--footer-muted)] transition hover:text-white"
+          >
+            {t.terms}
+          </Link>
+          <a
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--footer-muted)] transition hover:text-white"
+          >
+            {t.github}
+          </a>
         </div>
       </div>
 

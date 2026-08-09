@@ -3,71 +3,75 @@
 import Image from "next/image";
 import { useLocale } from "@/components/LocaleProvider";
 
-export function AboutSection() {
+export function StorySection() {
   const { t } = useLocale();
 
+  const chapters = [
+    {
+      title: t.storyTriggerTitle,
+      body: t.storyTriggerBody,
+      image: "/mascots/both-reading-together.png",
+      imageAlt: t.aboutMascotAlt,
+      glow: "rgba(126,200,245,0.22)",
+    },
+    {
+      title: t.storyFrustrationTitle,
+      body: t.storyFrustrationBody,
+      image: "/mascots/pill-holding-heart.png",
+      imageAlt: "",
+      glow: "rgba(255,126,112,0.22)",
+    },
+    {
+      title: t.storySolutionTitle,
+      body: t.storySolutionBody,
+      image: "/mascots/drop-thumbs-up.png",
+      imageAlt: "",
+      glow: "rgba(120,193,147,0.22)",
+    },
+    {
+      title: t.storySupportTitle,
+      body: t.storySupportBody,
+      image: "/mascots/both-dancing.png",
+      imageAlt: "",
+      glow: "rgba(255,199,44,0.2)",
+    },
+  ];
+
   return (
-    <section id="about" className="scroll-mt-24 px-5 py-16 sm:px-8 sm:py-24">
+    <section id="story" className="scroll-mt-24 px-5 py-16 sm:px-8 sm:py-24">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[13px] font-bold uppercase tracking-[0.14em] text-[var(--purple)]">
-            {t.aboutEyebrow}
+            {t.storyEyebrow}
           </p>
           <h2 className="font-display mt-2 text-3xl font-bold tracking-[-0.03em] text-[var(--ink)] sm:text-5xl">
-            {t.aboutTitle}
+            {t.storyTitle}
           </h2>
           <p className="mt-4 text-[17px] font-medium leading-8 text-[var(--muted)] sm:text-[18px]">
-            {t.aboutIntro}
+            {t.storyIntro}
           </p>
         </div>
 
         <div className="mt-14 space-y-16 sm:mt-20 sm:space-y-24">
-          <AboutBlock
-            eyebrow="01"
-            title={t.aboutStoryTitle}
-            body={t.aboutStoryBody}
-            image="/mascots/both-reading-together.png"
-            imageAlt={t.aboutMascotAlt}
-            reverse={false}
-            glow="rgba(126,200,245,0.22)"
-          />
-
-          <AboutBlock
-            eyebrow="02"
-            title={t.aboutFreeTitle}
-            body={t.aboutFreeBody}
-            image="/mascots/pill-holding-heart.png"
-            imageAlt=""
-            reverse
-            glow="rgba(255,126,112,0.22)"
-          />
-
-          <AboutBlock
-            eyebrow="03"
-            title={t.aboutPrivacyTitle}
-            body={t.aboutPrivacyBody}
-            image="/mascots/drop-thumbs-up.png"
-            imageAlt=""
-            reverse={false}
-            glow="rgba(120,193,147,0.22)"
-          />
-
-          <AboutBlock
-            eyebrow="04"
-            title={t.aboutTogetherTitle}
-            body={t.aboutTogetherBody}
-            image="/mascots/both-dancing.png"
-            imageAlt=""
-            reverse
-            glow="rgba(255,199,44,0.2)"
-          />
+          {chapters.map((chapter, index) => (
+            <StoryBlock
+              key={chapter.title}
+              eyebrow={String(index + 1).padStart(2, "0")}
+              title={chapter.title}
+              body={chapter.body}
+              image={chapter.image}
+              imageAlt={chapter.imageAlt}
+              reverse={index % 2 === 1}
+              glow={chapter.glow}
+            />
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-function AboutBlock({
+function StoryBlock({
   eyebrow,
   title,
   body,
@@ -106,7 +110,7 @@ function AboutBlock({
         />
       </div>
 
-      <div>
+      <div className="rounded-3xl border border-[var(--card-border)] bg-[var(--card)] p-6 shadow-[var(--shadow-soft)] sm:p-8">
         <p className="text-[12px] font-bold uppercase tracking-[0.16em] text-[var(--purple)]">
           {eyebrow}
         </p>

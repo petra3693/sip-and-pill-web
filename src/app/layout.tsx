@@ -20,9 +20,9 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Sip & Pill — Free water & medication companion",
+  title: "Sip & Pill — Hydration & medication tracking, free forever",
   description:
-    "A friendly offline companion for water and medications. 100% free, ad-free, and private.",
+    "No paywalls, no ads, no sign-ups. A private, offline-first companion for hydration and medications — free forever.",
   applicationName: "Sip & Pill",
   icons: {
     icon: "/icon.png",
@@ -34,8 +34,8 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f4f7fb" },
-    { media: "(prefers-color-scheme: dark)", color: "#0b1020" },
+    { media: "(prefers-color-scheme: light)", color: "#fff8f6" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f172a" },
   ],
 };
 

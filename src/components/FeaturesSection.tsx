@@ -7,35 +7,35 @@ export function FeaturesSection() {
 
   const features = [
     {
-      title: t.featureWaterTitle,
-      description: t.featureWaterDesc,
+      title: t.featureHydrationTitle,
+      description: t.featureHydrationDesc,
       iconBg: "bg-[var(--tip)]",
+      accent: "var(--sip-blue)",
       icon: <DropIcon />,
     },
     {
       title: t.featureMedsTitle,
       description: t.featureMedsDesc,
       iconBg: "bg-[var(--coral-muted)]",
+      accent: "var(--coral)",
       icon: <PillIcon />,
     },
     {
-      title: t.featurePrivacyTitle,
-      description: t.featurePrivacyDesc,
+      title: t.featureStatsTitle,
+      description: t.featureStatsDesc,
       iconBg: "bg-[var(--privacy)]",
-      icon: <ShieldIcon />,
-    },
-    {
-      title: t.featureFreeTitle,
-      description: t.featureFreeDesc,
-      iconBg: "bg-[var(--cream)]",
-      icon: <HeartIcon />,
+      accent: "var(--success)",
+      icon: <StatsIcon />,
     },
   ];
 
   return (
-    <section id="features" className="scroll-mt-24 px-5 py-16 sm:px-8 sm:py-20">
+    <section
+      id="features"
+      className="scroll-mt-24 border-y border-[var(--card-border)] bg-[var(--bg-peach-deep)]/55 px-5 py-16 sm:px-8 sm:py-20"
+    >
       <div className="mx-auto max-w-6xl">
-        <div className="max-w-2xl animate-fade-up">
+        <div className="mx-auto max-w-2xl text-center animate-fade-up">
           <p className="text-[13px] font-bold uppercase tracking-[0.14em] text-[var(--purple)]">
             {t.featuresEyebrow}
           </p>
@@ -47,24 +47,30 @@ export function FeaturesSection() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {features.map((feature) => (
+        <div className="mt-12 grid gap-8 lg:grid-cols-3 lg:gap-6">
+          {features.map((feature, index) => (
             <article
               key={feature.title}
-              className="rounded-3xl border border-[var(--card-border)] bg-[var(--card)] p-5 shadow-[var(--shadow-soft)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift)]"
+              className="animate-fade-up relative px-1 text-center sm:text-left lg:px-4"
+              style={{ animationDelay: `${0.08 * (index + 1)}s` }}
             >
               <div
                 className={[
-                  "mb-4 flex size-12 items-center justify-center rounded-2xl text-[var(--ink)]",
+                  "mx-auto mb-5 flex size-14 items-center justify-center rounded-2xl text-[var(--ink)] sm:mx-0",
                   feature.iconBg,
                 ].join(" ")}
               >
                 {feature.icon}
               </div>
-              <h3 className="font-display text-[17px] font-bold tracking-tight text-[var(--ink)]">
+              <div
+                className="mx-auto mb-4 h-1 w-12 rounded-full sm:mx-0"
+                style={{ background: feature.accent }}
+                aria-hidden="true"
+              />
+              <h3 className="font-display text-[1.2rem] font-bold tracking-tight text-[var(--ink)]">
                 {feature.title}
               </h3>
-              <p className="mt-2 text-[14px] font-medium leading-6 text-[var(--muted)]">
+              <p className="mt-2 text-[15px] font-medium leading-7 text-[var(--muted)]">
                 {feature.description}
               </p>
             </article>
@@ -77,7 +83,7 @@ export function FeaturesSection() {
 
 function DropIcon() {
   return (
-    <svg className="size-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg className="size-7" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path
         d="M12 3c2.8 3.6 6 7.2 6 11a6 6 0 1 1-12 0c0-3.8 3.2-7.4 6-11Z"
         stroke="currentColor"
@@ -90,7 +96,7 @@ function DropIcon() {
 
 function PillIcon() {
   return (
-    <svg className="size-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg className="size-7" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <rect
         x="3.5"
         y="8"
@@ -111,34 +117,14 @@ function PillIcon() {
   );
 }
 
-function ShieldIcon() {
+function StatsIcon() {
   return (
-    <svg className="size-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg className="size-7" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path
-        d="M12 3 5 6v6c0 4.5 2.8 7.4 7 9 4.2-1.6 7-4.5 7-9V6l-7-3Z"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinejoin="round"
-      />
-      <path
-        d="m9.5 12 1.8 1.8 3.7-3.8"
+        d="M5 19V11M12 19V5M19 19v-7"
         stroke="currentColor"
         strokeWidth="1.8"
         strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function HeartIcon() {
-  return (
-    <svg className="size-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path
-        d="M12 20s-7-4.3-7-9.2C5 7.6 6.8 6 8.8 6c1.3 0 2.4.6 3.2 1.6C12.8 6.6 13.9 6 15.2 6 17.2 6 19 7.6 19 10.8 19 15.7 12 20 12 20Z"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinejoin="round"
       />
     </svg>
   );

@@ -1,15 +1,15 @@
 "use client";
 
+import { AppleIcon } from "@/components/AppleIcon";
 import { Button } from "@/components/Button";
 import { useDonation } from "@/components/DonationProvider";
 import { HeroVisual } from "@/components/HeroVisual";
 import { useLocale } from "@/components/LocaleProvider";
-import { formatHeroBody } from "@/lib/i18n";
+import { APP_STORE_URL, APP_WEB_URL } from "@/lib/links";
 
 export function HeroSection() {
   const { t } = useLocale();
   const { openDonation } = useDonation();
-  const body = formatHeroBody(t.heroBody, t.heroBodyHighlight);
 
   return (
     <section className="relative overflow-hidden">
@@ -19,7 +19,7 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[1fr_1.05fr] lg:gap-10 lg:py-24">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[1.05fr_1fr] lg:gap-12 lg:py-24">
         <div className="animate-fade-up">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[var(--card-border)] bg-[var(--card)] px-4 py-1.5 shadow-sm">
             <span className="size-2 rounded-full bg-[var(--coral)]" />
@@ -28,29 +28,46 @@ export function HeroSection() {
             </p>
           </div>
 
-          <h1 className="font-display mt-1 max-w-xl text-[3.1rem] font-bold leading-[0.98] tracking-[-0.04em] text-[var(--ink)] sm:text-6xl lg:text-[4.25rem]">
+          <p className="font-display text-[2.65rem] font-bold leading-[0.95] tracking-[-0.04em] text-[var(--ink)] sm:text-5xl lg:text-[3.75rem]">
             Sip &amp; Pill
+          </p>
+
+          <h1 className="font-display mt-5 max-w-xl text-[1.55rem] font-semibold leading-snug tracking-[-0.03em] text-[var(--ink)] sm:text-[1.85rem] lg:text-[2.05rem]">
+            {t.heroHeadline}
           </h1>
 
-          <p className="font-display mt-5 max-w-xl text-[1.45rem] font-semibold leading-snug tracking-[-0.02em] text-[var(--ink)]/80 sm:text-[1.85rem]">
-            {t.tagline}
-          </p>
-
           <p className="mt-4 max-w-lg text-[17px] font-medium leading-7 text-[var(--muted)] sm:text-[18px]">
-            {body.before}
-            <span className="font-semibold text-[var(--ink)]">{body.highlight}</span>
-            {body.after}
+            {t.heroSubheadline}
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <Button
+              href={APP_WEB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto sm:min-w-[220px]"
+            >
+              {t.openAppCta}
+            </Button>
+            <Button
+              variant="secondary"
               onClick={openDonation}
-              className="w-full sm:w-auto sm:min-w-[260px]"
+              className="w-full sm:w-auto sm:min-w-[220px]"
             >
               <CoffeeIcon />
               {t.buyCoffee}
             </Button>
           </div>
+
+          <a
+            href={APP_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center gap-2 text-[14px] font-semibold text-[var(--purple)] transition hover:brightness-110"
+          >
+            <AppleIcon className="size-4" />
+            {t.downloadCta}
+          </a>
 
           <p className="mt-4 text-[14px] font-medium text-[var(--muted)]">
             {t.freeOfflinePrivate}
