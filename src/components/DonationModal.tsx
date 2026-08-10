@@ -35,7 +35,12 @@ export function DonationModal({ open, onClose }: DonationModalProps) {
       onClick={onClose}
     >
       <div
-        className="flex max-h-[90vh] w-full max-w-md flex-col overflow-y-auto rounded-[28px] bg-white p-4 shadow-2xl animate-fade-up scrollbar-hide sm:p-5"
+        className="flex max-h-[90vh] w-full max-w-md flex-col rounded-[28px] bg-white p-4 shadow-2xl animate-fade-up sm:p-5"
+        style={{
+          overflowY: "auto",
+          WebkitOverflowScrolling: "touch",
+          touchAction: "pan-y",
+        }}
         onClick={(event) => event.stopPropagation()}
       >
         <h2 className="shrink-0 text-center font-display text-[20px] font-bold text-[#2d2a2a]">
@@ -45,15 +50,28 @@ export function DonationModal({ open, onClose }: DonationModalProps) {
           Thank you for helping keep Sip &amp; Pill free and accessible to all!
         </p>
 
-        <div className="mt-4 w-full overflow-hidden rounded-2xl">
+        <div
+          className="mt-4 w-full rounded-2xl"
+          style={{
+            width: "100%",
+            height: "600px",
+            overflowY: "auto",
+            WebkitOverflowScrolling: "touch",
+            touchAction: "pan-y",
+          }}
+        >
           <iframe
             id="kofiframe"
             src={KOFI_EMBED_SRC}
             title="sipandpill"
-            height={650}
-            loading="lazy"
-            className="w-full border-0 bg-transparent"
-            style={{ border: "none", width: "100%", padding: 4, background: "transparent" }}
+            scrolling="yes"
+            style={{
+              border: "none",
+              width: "100%",
+              height: "100%",
+              minHeight: "600px",
+              background: "transparent",
+            }}
           />
         </div>
 
