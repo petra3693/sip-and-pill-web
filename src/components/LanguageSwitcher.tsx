@@ -4,7 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import { useLocale } from "@/components/LocaleProvider";
 import { LANGUAGES } from "@/lib/i18n";
 
-export function LanguageSwitcher() {
+export function LanguageSwitcher({
+  controlClassName,
+}: {
+  controlClassName?: string;
+}) {
   const { locale, setLocale, t } = useLocale();
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -39,15 +43,19 @@ export function LanguageSwitcher() {
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-label={t.chooseLanguage}
-        className="flex h-11 items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--card)] px-3 text-[var(--ink)] shadow-sm transition active:scale-[0.98]"
+        className={
+          controlClassName ??
+          "inline-flex h-11 items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--card)] px-3 text-[var(--ink)] shadow-sm transition active:scale-[0.98]"
+        }
       >
-        <span className="text-base leading-none" aria-hidden="true">
+        <span className="pl-1 text-base leading-none" aria-hidden="true">
           {current.flag}
         </span>
         <span className="hidden text-[13px] font-bold sm:inline">
           {current.label}
         </span>
         <ChevronIcon open={open} />
+        <span className="w-0.5" aria-hidden="true" />
       </button>
 
       {open ? (

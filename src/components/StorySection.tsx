@@ -2,125 +2,70 @@
 
 import Image from "next/image";
 import { useLocale } from "@/components/LocaleProvider";
+import { FadeIn, Float } from "@/components/Motion";
 
 export function StorySection() {
   const { t } = useLocale();
 
-  const chapters = [
-    {
-      title: t.storyTriggerTitle,
-      body: t.storyTriggerBody,
-      image: "/mascots/both-reading-together.png",
-      imageAlt: t.aboutMascotAlt,
-      glow: "rgba(126,200,245,0.22)",
-    },
-    {
-      title: t.storyFrustrationTitle,
-      body: t.storyFrustrationBody,
-      image: "/mascots/pill-holding-heart.png",
-      imageAlt: "",
-      glow: "rgba(255,126,112,0.22)",
-    },
-    {
-      title: t.storySolutionTitle,
-      body: t.storySolutionBody,
-      image: "/mascots/drop-thumbs-up.png",
-      imageAlt: "",
-      glow: "rgba(120,193,147,0.22)",
-    },
-    {
-      title: t.storySupportTitle,
-      body: t.storySupportBody,
-      image: "/mascots/both-dancing.png",
-      imageAlt: "",
-      glow: "rgba(255,199,44,0.2)",
-    },
+  const beats = [
+    { title: t.storyTriggerTitle, body: t.storyTriggerBody },
+    { title: t.storyFrustrationTitle, body: t.storyFrustrationBody },
+    { title: t.storySolutionTitle, body: t.storySolutionBody },
   ];
 
   return (
-    <section id="story" className="scroll-mt-24 px-5 py-16 sm:px-8 sm:py-24">
+    <section id="story" className="scroll-mt-24 px-5 py-14 sm:px-8 sm:py-20">
       <div className="mx-auto max-w-6xl">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-[13px] font-bold uppercase tracking-[0.14em] text-[var(--purple)]">
+        <FadeIn className="mx-auto max-w-3xl text-center">
+          <p className="text-[13px] font-extrabold uppercase tracking-[0.14em] text-[var(--coral)]">
             {t.storyEyebrow}
           </p>
-          <h2 className="font-display mt-2 text-3xl font-bold tracking-[-0.03em] text-[var(--ink)] sm:text-5xl">
+          <h2 className="font-display mt-2 text-4xl font-extrabold tracking-[-0.03em] text-[var(--ink)] sm:text-[3.25rem]">
             {t.storyTitle}
           </h2>
-          <p className="mt-4 text-[17px] font-medium leading-8 text-[var(--muted)] sm:text-[18px]">
+          <p className="mt-4 text-[18px] font-semibold leading-8 text-[var(--ink)] sm:text-[19px]">
             {t.storyIntro}
           </p>
-        </div>
+        </FadeIn>
 
-        <div className="mt-14 space-y-16 sm:mt-20 sm:space-y-24">
-          {chapters.map((chapter, index) => (
-            <StoryBlock
-              key={chapter.title}
-              eyebrow={String(index + 1).padStart(2, "0")}
-              title={chapter.title}
-              body={chapter.body}
-              image={chapter.image}
-              imageAlt={chapter.imageAlt}
-              reverse={index % 2 === 1}
-              glow={chapter.glow}
-            />
-          ))}
+        <div className="mt-12 grid items-center gap-10 lg:mt-16 lg:grid-cols-[1fr_1.05fr] lg:gap-14">
+          <FadeIn className="relative mx-auto w-full max-w-[540px]">
+            <Float amplitude={10} duration={4}>
+              <Image
+                src="/mascots/both-reading-together.png"
+                alt={t.aboutMascotAlt}
+                width={640}
+                height={640}
+                className="mascot-cutout mx-auto w-full object-contain"
+              />
+            </Float>
+          </FadeIn>
+
+          <div className="space-y-8 sm:space-y-10">
+            {beats.map((beat, index) => (
+              <FadeIn key={beat.title} delay={0.05 * index}>
+                <div>
+                  <p className="text-[13px] font-extrabold uppercase tracking-[0.16em] text-[var(--lavender-deep)]">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="font-display mt-1.5 text-2xl font-extrabold tracking-tight text-[var(--ink)] sm:text-[1.85rem]">
+                    {beat.title}
+                  </h3>
+                  <p className="mt-3 text-[17px] font-semibold leading-8 text-[var(--ink)] sm:text-[18px]">
+                    {beat.body}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+
+            <FadeIn delay={0.2}>
+              <blockquote className="border-l-[3px] border-[var(--coral)] pl-5 text-[17px] font-semibold italic leading-8 text-[var(--ink)] sm:text-[18px]">
+                “{t.trustQuote}”
+              </blockquote>
+            </FadeIn>
+          </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function StoryBlock({
-  eyebrow,
-  title,
-  body,
-  image,
-  imageAlt,
-  reverse,
-  glow,
-}: {
-  eyebrow: string;
-  title: string;
-  body: string;
-  image: string;
-  imageAlt: string;
-  reverse: boolean;
-  glow: string;
-}) {
-  return (
-    <div
-      className={[
-        "grid items-center gap-8 lg:grid-cols-2 lg:gap-14",
-        reverse ? "lg:[&>*:first-child]:order-2" : "",
-      ].join(" ")}
-    >
-      <div className="relative mx-auto flex w-full max-w-[340px] items-center justify-center lg:max-w-[400px]">
-        <div
-          className="absolute inset-[12%] rounded-full blur-3xl"
-          style={{ background: glow }}
-          aria-hidden="true"
-        />
-        <Image
-          src={image}
-          alt={imageAlt}
-          width={400}
-          height={400}
-          className="mascot-cutout relative z-10 w-full object-contain animate-float"
-        />
-      </div>
-
-      <div className="rounded-3xl border border-[var(--card-border)] bg-[var(--card)] p-6 shadow-[var(--shadow-soft)] sm:p-8">
-        <p className="text-[12px] font-bold uppercase tracking-[0.16em] text-[var(--purple)]">
-          {eyebrow}
-        </p>
-        <h3 className="font-display mt-2 text-2xl font-bold tracking-[-0.03em] text-[var(--ink)] sm:text-3xl">
-          {title}
-        </h3>
-        <p className="mt-4 text-[16px] font-medium leading-8 text-[var(--muted)] sm:text-[17px]">
-          {body}
-        </p>
-      </div>
-    </div>
   );
 }

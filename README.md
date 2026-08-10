@@ -24,4 +24,10 @@ Edit `src/lib/links.ts` before launch:
 
 - `APP_STORE_URL` — Apple App Store product page
 - `DONATION_URL` — Buy Me a Coffee / Donably / tip jar
-- `SUPPORT_EMAIL` — contact inbox
+
+## Contact form (server env)
+
+The contact form never exposes an email in the browser. Set one of these in `.env.local` / Vercel:
+
+- `WEB3FORMS_ACCESS_KEY` — free key from [web3forms.com](https://web3forms.com) (recommended)
+- or `CONTACT_TO_EMAIL` / `SUPPORT_EMAIL` — FormSubmit delivery (confirm the first email)

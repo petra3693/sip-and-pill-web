@@ -3,15 +3,15 @@ import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "reac
 type Variant = "primary" | "secondary" | "ghost" | "dark";
 
 const base =
-  "inline-flex h-14 items-center justify-center gap-2.5 rounded-full px-6 text-[17px] font-semibold transition-all duration-200 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50";
+  "inline-flex h-11 items-center justify-center gap-2 rounded-full px-5 text-[15px] font-bold transition-all duration-200 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 sm:px-6 sm:text-[16px]";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-[var(--coral)] text-white shadow-[var(--shadow-soft)] hover:brightness-105",
+    "bg-[var(--coral)] text-[#0d0e23] shadow-[0_10px_28px_rgba(255,106,90,0.35)] hover:brightness-105",
   secondary:
-    "bg-[var(--card)] text-[var(--purple)] border border-[var(--border)] shadow-sm hover:bg-[var(--coral-muted)]",
-  ghost: "bg-transparent text-[var(--purple)] hover:bg-[var(--coral-muted)]",
-  dark: "bg-[var(--ink)] text-white shadow-[var(--shadow-soft)] hover:brightness-110 dark:bg-white dark:text-[var(--bg-peach)]",
+    "bg-[#0d0e23] text-white shadow-[var(--shadow-soft)] hover:brightness-125 dark:bg-[#1a1840] dark:text-white dark:hover:brightness-110",
+  ghost: "bg-transparent text-[var(--ink)] hover:bg-[var(--coral-muted)]",
+  dark: "bg-[#0d0e23] text-white shadow-[var(--shadow-soft)] hover:brightness-125",
 };
 
 type CommonProps = {

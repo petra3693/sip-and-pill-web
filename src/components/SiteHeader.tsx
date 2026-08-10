@@ -8,6 +8,9 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLocale } from "@/components/LocaleProvider";
 import { useTheme } from "@/components/ThemeProvider";
 
+const controlClass =
+  "inline-flex h-11 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--card)] text-[var(--ink)] shadow-sm transition active:scale-[0.98]";
+
 export function SiteHeader() {
   const { theme, toggleTheme } = useTheme();
   const { t } = useLocale();
@@ -15,7 +18,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-[var(--card-border)] bg-[var(--header-bg)] backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-5 sm:h-[4.25rem] sm:px-8">
+      <div className="mx-auto flex min-h-14 max-w-6xl items-center justify-between gap-3 px-5 py-2 sm:min-h-16 sm:px-8">
         <Link href="/" className="flex min-w-0 items-center gap-2.5">
           <Image
             src="/icon.png"
@@ -30,38 +33,37 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 text-[14px] font-semibold text-[var(--muted)] lg:flex">
-          <a href="#values" className="transition hover:text-[var(--purple)]">
+        <nav className="hidden items-center gap-6 text-[14px] font-semibold text-[var(--ink)]/70 lg:flex">
+          <a href="#different" className="transition hover:text-[var(--coral)]">
             {t.navValues}
           </a>
-          <a href="#features" className="transition hover:text-[var(--purple)]">
-            {t.navFeatures}
-          </a>
-          <a href="#story" className="transition hover:text-[var(--purple)]">
+          <a href="#story" className="transition hover:text-[var(--coral)]">
             {t.navStory}
           </a>
-          <a href="#support" className="transition hover:text-[var(--purple)]">
+          <a href="#roadmap" className="transition hover:text-[var(--coral)]">
+            {t.navRoadmap}
+          </a>
+          <a href="#support" className="transition hover:text-[var(--coral)]">
             {t.navSupport}
+          </a>
+          <a href="#contact" className="transition hover:text-[var(--coral)]">
+            {t.contact}
           </a>
         </nav>
 
-        <div className="flex items-center gap-2">
-          <LanguageSwitcher />
+        <div className="flex items-center justify-end gap-2">
+          <LanguageSwitcher
+            controlClassName={`${controlClass} gap-2 px-3`}
+          />
           <button
             type="button"
             onClick={toggleTheme}
             aria-label={theme === "light" ? t.darkMode : t.lightMode}
-            className="flex size-11 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--card)] text-[var(--ink)] shadow-sm transition active:scale-[0.98]"
+            className={`${controlClass} w-11 shrink-0`}
           >
             {theme === "light" ? <MoonIcon /> : <SunIcon />}
           </button>
-          <Button
-            onClick={openDonation}
-            className="h-11 px-3 text-[13px] sm:px-4 sm:text-[14px]"
-          >
-            <span className="hidden md:inline">{t.supportProjectCta}</span>
-            <span className="md:hidden">{t.navSupport} ☕</span>
-          </Button>
+          <Button onClick={openDonation}>{t.supportProjectCta}</Button>
         </div>
       </div>
     </header>

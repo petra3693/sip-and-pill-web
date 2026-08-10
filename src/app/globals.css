@@ -1,85 +1,95 @@
 @import "tailwindcss";
 
-/* Aligned with Sip & Pill app brand: peach, purple, coral + soft water blue. */
+/* Brand tokens mirrored from Sip & Pill app screenshots */
 :root {
-  --bg-peach: #fff8f6;
-  --bg-peach-deep: #fbeae5;
-  --coral: #ff6b52;
-  --coral-soft: #ff6b6b;
-  --coral-muted: #ffece6;
-  --sip-blue: #5bb8e8;
-  --purple: #5c4d9a;
-  --indigo: #5c4d9a;
+  --coral: #ff6a5a;
+  --coral-soft: #ff7a6c;
+  --coral-muted: #ffe8e4;
+  --lavender: #8c8ad6;
+  --lavender-deep: #7b78e5;
+  --purple: #8c8ad6;
+  --indigo: #5e56a0;
   --indigo-deep: #4a3d82;
-  --ink: #2d2a2a;
-  --muted: #8a807e;
-  --success: #78c193;
-  --border: #d1cfce;
-  --surface: #ffffff;
-  --tip: #e6e0ff;
+  --cyan: #5eead4;
+  --sip-blue: #7ec8f5;
+  --mint: #78c193;
+  --mint-soft: #e8f8ef;
   --yellow: #ffc72c;
   --cream: #fff9db;
-  --privacy: #eef8f2;
+  --ink: #2d2a2a;
+  --ink-deep: #0d0e23;
+  --muted: #8a807e;
+  --border: #e4ddd9;
+  --surface: #ffffff;
+  --tip: #e6e0ff;
+  --privacy: #e8f8ef;
+  --bg-peach: #fff8f6;
+  --bg-peach-deep: #f4effa;
   --background: #fff8f6;
   --foreground: #2d2a2a;
   --card: #ffffff;
-  --card-border: #f2e8e4;
-  --header-bg: rgba(255, 248, 246, 0.86);
-  --shadow-soft: 0 8px 16px rgba(92, 77, 154, 0.08);
-  --shadow-lift: 0 18px 40px rgba(26, 20, 40, 0.12);
-  --screen-gradient: linear-gradient(245deg, #fff8f6 25%, #fbeae5 75%);
+  --card-border: rgba(45, 42, 42, 0.06);
+  --header-bg: rgba(255, 248, 246, 0.88);
+  --shadow-soft: 0 10px 28px rgba(13, 14, 35, 0.08);
+  --shadow-lift: 0 22px 48px rgba(13, 14, 35, 0.14);
+  --screen-gradient: linear-gradient(180deg, #fff8f6 0%, #f4effa 100%);
   --hero-glow: radial-gradient(
-    ellipse 70% 55% at 72% 30%,
-    rgba(255, 107, 82, 0.16),
-    rgba(91, 184, 232, 0.12) 42%,
-    transparent 68%
+    ellipse 70% 55% at 70% 35%,
+    rgba(255, 106, 90, 0.18),
+    rgba(140, 138, 214, 0.16) 42%,
+    transparent 70%
   );
-  --footer-bg: #1a1428;
-  --footer-fg: #eeecf7;
-  --footer-muted: rgba(238, 236, 247, 0.72);
+  --footer-bg: #0d0e23;
+  --footer-fg: #f7f4ff;
+  --footer-muted: rgba(247, 244, 255, 0.65);
 }
 
 .dark {
-  --bg-peach: #0f172a;
-  --bg-peach-deep: #1a2238;
-  --coral: #ff7a64;
-  --coral-soft: #ff8a8a;
-  --coral-muted: rgba(255, 107, 82, 0.18);
+  --coral: #ff7a6c;
+  --coral-soft: #ff8a7c;
+  --coral-muted: rgba(255, 106, 90, 0.18);
+  --lavender: #9b98e8;
+  --lavender-deep: #8c8ad6;
+  --purple: #9b98e8;
+  --indigo: #8c8ad6;
+  --indigo-deep: #6f6bc4;
+  --cyan: #5eead4;
   --sip-blue: #7ec8f5;
-  --purple: #9b8fd4;
-  --indigo: #9b8fd4;
-  --indigo-deep: #7e70b8;
-  --ink: #f7f4f2;
-  --muted: #b5adaa;
-  --success: #8fd0a6;
-  --border: #2c3550;
-  --surface: #1a2238;
-  --tip: rgba(156, 143, 212, 0.22);
+  --mint: #86efac;
+  --mint-soft: rgba(120, 193, 147, 0.16);
   --yellow: #ffd45c;
   --cream: #3a3220;
+  --ink: #f7f4ff;
+  --ink-deep: #f7f4ff;
+  --muted: #b8b3d0;
+  --border: #2a2c48;
+  --surface: #161836;
+  --tip: rgba(140, 138, 214, 0.2);
   --privacy: rgba(120, 193, 147, 0.16);
-  --background: #0f172a;
-  --foreground: #f7f4f2;
-  --card: #151c30;
-  --card-border: #27314a;
-  --header-bg: rgba(15, 23, 42, 0.86);
-  --shadow-soft: 0 8px 22px rgba(0, 0, 0, 0.35);
-  --shadow-lift: 0 24px 56px rgba(0, 0, 0, 0.5);
+  --bg-peach: #0d0e23;
+  --bg-peach-deep: #161836;
+  --background: #0d0e23;
+  --foreground: #f7f4ff;
+  --card: #161836;
+  --card-border: rgba(247, 244, 255, 0.08);
+  --header-bg: rgba(13, 14, 35, 0.86);
+  --shadow-soft: 0 10px 28px rgba(0, 0, 0, 0.35);
+  --shadow-lift: 0 28px 60px rgba(0, 0, 0, 0.5);
   --screen-gradient: radial-gradient(
       ellipse 90% 70% at 50% -10%,
-      rgba(92, 77, 154, 0.32),
+      rgba(140, 138, 214, 0.28),
       transparent 55%
     ),
-    linear-gradient(180deg, #0f172a 0%, #151c30 55%, #0f172a 100%);
+    linear-gradient(180deg, #0d0e23 0%, #161836 55%, #0d0e23 100%);
   --hero-glow: radial-gradient(
     ellipse 70% 60% at 72% 40%,
-    rgba(255, 126, 112, 0.2),
-    rgba(92, 77, 154, 0.28) 40%,
+    rgba(255, 122, 108, 0.22),
+    rgba(140, 138, 214, 0.28) 40%,
     transparent 70%
   );
-  --footer-bg: #070a14;
-  --footer-fg: #eef2ff;
-  --footer-muted: rgba(238, 242, 255, 0.62);
+  --footer-bg: #070814;
+  --footer-fg: #f7f4ff;
+  --footer-muted: rgba(247, 244, 255, 0.58);
 }
 
 @theme inline {
@@ -130,23 +140,13 @@ input {
   }
 }
 
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
+@keyframes float-slow {
+  0%,
+  100% {
     transform: translateY(0);
   }
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+  50% {
+    transform: translateY(-14px);
   }
 }
 
@@ -154,24 +154,8 @@ input {
   animation: float 3.2s ease-in-out infinite;
 }
 
-.animate-fade-up {
-  animation: fade-up 0.55s ease-out both;
-}
-
-.animate-fade-in {
-  animation: fade-in 0.4s ease-out both;
-}
-
-.delay-100 {
-  animation-delay: 0.1s;
-}
-
-.delay-200 {
-  animation-delay: 0.2s;
-}
-
-.delay-300 {
-  animation-delay: 0.3s;
+.animate-float-slow {
+  animation: float-slow 4.2s ease-in-out infinite;
 }
 
 .mascot-cutout {
@@ -198,8 +182,7 @@ input {
   }
 
   .animate-float,
-  .animate-fade-up,
-  .animate-fade-in {
+  .animate-float-slow {
     animation: none;
   }
 }

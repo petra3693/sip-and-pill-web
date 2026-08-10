@@ -20,10 +20,18 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Sip & Pill — Hydration & medication tracking, free forever",
+  title:
+    "Sip & Pill — Free medication & water reminder app for families",
   description:
-    "No paywalls, no ads, no sign-ups. A private, offline-first companion for hydration and medications — free forever.",
+    "A free forever hydration and medication tracker for elderly parents and families. Offline, private, no account, no ads — built simple enough for first-time use at any age.",
   applicationName: "Sip & Pill",
+  keywords: [
+    "free hydration tracker",
+    "medication reminder app",
+    "water reminder for elderly",
+    "offline medication tracker",
+    "family health app free",
+  ],
   icons: {
     icon: "/icon.png",
     apple: "/icon.png",
@@ -35,7 +43,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#fff8f6" },
-    { media: "(prefers-color-scheme: dark)", color: "#0f172a" },
+    { media: "(prefers-color-scheme: dark)", color: "#0d0e23" },
   ],
 };
 
