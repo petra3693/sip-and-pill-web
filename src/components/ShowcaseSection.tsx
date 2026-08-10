@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useLocale } from "@/components/LocaleProvider";
 import { FadeIn, Float } from "@/components/Motion";
-import { PhoneFrame } from "@/components/PhoneFrame";
 
 export function ShowcaseSection() {
   const { t } = useLocale();
@@ -16,9 +15,10 @@ export function ShowcaseSection() {
       body: t.valueFreeDesc,
       reverse: false,
       visual: {
-        kind: "phone" as const,
-        src: "/screenshots/splash.png",
-        alt: "Sip & Pill splash screen",
+        src: "/screenshots/setup-flow.png",
+        alt: "Sip & Pill setup screens for water and medication goals",
+        width: 1024,
+        height: 766,
       },
     },
     {
@@ -28,9 +28,10 @@ export function ShowcaseSection() {
       body: t.valuePrivateDesc,
       reverse: true,
       visual: {
-        kind: "phone" as const,
-        src: "/screenshots/settings-privacy.png",
-        alt: "Sip & Pill privacy settings",
+        src: "/screenshots/home-settings.png",
+        alt: "Sip & Pill home and settings screens",
+        width: 978,
+        height: 1024,
       },
     },
     {
@@ -40,9 +41,10 @@ export function ShowcaseSection() {
       body: t.valueSimpleDesc,
       reverse: false,
       visual: {
-        kind: "illustration" as const,
-        src: "/mascots/both-high-five.png",
-        alt: "",
+        src: "/screenshots/reminders-about.png",
+        alt: "Sip & Pill reminders and About screens",
+        width: 993,
+        height: 1024,
       },
     },
     {
@@ -52,9 +54,10 @@ export function ShowcaseSection() {
       body: t.roadmapLanguagesDesc,
       reverse: true,
       visual: {
-        kind: "phone" as const,
-        src: "/screenshots/language.png",
-        alt: "Sip & Pill language picker",
+        src: "/screenshots/language-welcome.png",
+        alt: "Sip & Pill language picker and welcome screens",
+        width: 952,
+        height: 1024,
       },
     },
   ];
@@ -83,23 +86,15 @@ export function ShowcaseSection() {
                   row.reverse ? "lg:[&>*:first-child]:order-2" : "",
                 ].join(" ")}
               >
-                <div className="relative mx-auto flex w-full max-w-[420px] items-center justify-center sm:max-w-[480px]">
+                <div className="relative mx-auto flex w-full max-w-[520px] items-center justify-center sm:max-w-[560px]">
                   <Float amplitude={8} duration={3.8} delay={index * 0.12}>
-                    {row.visual.kind === "phone" ? (
-                      <PhoneFrame
-                        src={row.visual.src}
-                        alt={row.visual.alt}
-                        className="mx-auto w-full max-w-[280px] sm:max-w-[300px]"
-                      />
-                    ) : (
-                      <Image
-                        src={row.visual.src}
-                        alt={row.visual.alt}
-                        width={560}
-                        height={560}
-                        className="mascot-cutout mx-auto h-auto w-full max-w-[420px] object-contain drop-shadow-xl sm:max-w-[460px]"
-                      />
-                    )}
+                    <Image
+                      src={row.visual.src}
+                      alt={row.visual.alt}
+                      width={row.visual.width}
+                      height={row.visual.height}
+                      className="mx-auto h-auto w-full object-contain drop-shadow-2xl"
+                    />
                   </Float>
                 </div>
 

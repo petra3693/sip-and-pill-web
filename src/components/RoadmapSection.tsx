@@ -24,17 +24,17 @@ export function RoadmapSection() {
   return (
     <section
       id="roadmap"
-      className="scroll-mt-24 bg-[#5e56a0] px-5 py-14 text-white sm:px-8 sm:py-16"
+      className="scroll-mt-24 bg-[#e6e0ff] px-5 py-14 text-[#0d0e23] sm:px-8 sm:py-16"
     >
       <div className="mx-auto max-w-6xl">
         <FadeIn className="mx-auto max-w-2xl text-center">
-          <p className="text-[13px] font-extrabold uppercase tracking-[0.14em] text-[var(--yellow)]">
+          <p className="text-[13px] font-extrabold uppercase tracking-[0.14em] text-[var(--indigo)]">
             {t.roadmapEyebrow}
           </p>
-          <h2 className="font-display mt-2 text-4xl font-extrabold tracking-[-0.03em] text-white sm:text-[3.25rem]">
+          <h2 className="font-display mt-2 text-4xl font-extrabold tracking-[-0.03em] text-[#0d0e23] sm:text-[3.25rem]">
             {t.roadmapTitle}
           </h2>
-          <p className="mt-3 text-[18px] font-semibold leading-8 text-white">
+          <p className="mt-3 text-[18px] font-semibold leading-8 text-[#2d2a2a]">
             {t.roadmapIntro}
           </p>
         </FadeIn>
@@ -43,14 +43,16 @@ export function RoadmapSection() {
           {items.map((item, index) => (
             <FadeIn key={item.title} delay={0.06 * index}>
               <article className="text-center md:text-left">
-                <div className="mx-auto mb-4 text-white md:mx-0">{item.icon}</div>
-                <p className="text-[11px] font-extrabold uppercase tracking-[0.1em] text-[var(--yellow)]">
+                <div className="mx-auto mb-4 text-[#0d0e23] md:mx-0">
+                  {item.icon}
+                </div>
+                <p className="text-[11px] font-extrabold uppercase tracking-[0.1em] text-[var(--indigo)]">
                   {item.status}
                 </p>
-                <h3 className="font-display mt-2 text-[1.35rem] font-extrabold tracking-tight text-white">
+                <h3 className="font-display mt-2 text-[1.35rem] font-extrabold tracking-tight text-[#0d0e23]">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-[16px] font-semibold leading-7 text-white">
+                <p className="mt-3 text-[16px] font-semibold leading-7 text-[#2d2a2a]">
                   {item.body}
                 </p>
               </article>

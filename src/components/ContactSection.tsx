@@ -45,34 +45,34 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="scroll-mt-24 px-5 py-12 sm:px-8 sm:py-16">
+    <section id="contact" className="scroll-mt-24 px-5 py-8 sm:px-8 sm:py-10">
       <div className="mx-auto max-w-6xl">
-        <FadeIn className="mx-auto max-w-2xl text-center">
+        <FadeIn className="mx-auto max-w-3xl text-center">
           <p className="text-[13px] font-extrabold uppercase tracking-[0.14em] text-[var(--coral)]">
             {t.contactEyebrow}
           </p>
-          <h2 className="font-display mt-2 text-4xl font-extrabold tracking-[-0.03em] text-[var(--ink)] sm:text-[3.25rem]">
+          <h2 className="font-display mt-1.5 text-3xl font-extrabold tracking-[-0.03em] text-[var(--ink)] sm:text-[2.6rem]">
             {t.contactTitle}
           </h2>
-          <p className="mt-3 text-[18px] font-semibold leading-8 text-[var(--ink)]">
+          <p className="mt-2 text-[16px] font-semibold leading-7 text-[var(--ink)]">
             {t.contactIntro}
           </p>
         </FadeIn>
 
-        <FadeIn delay={0.08} className="mx-auto mt-10 max-w-2xl">
+        <FadeIn delay={0.08} className="mx-auto mt-6 max-w-3xl">
           {status === "success" ? (
             <div
               role="status"
-              className="rounded-[2rem] border border-[var(--mint)]/30 bg-[var(--mint-soft)] px-6 py-10 text-center shadow-[var(--shadow-soft)]"
+              className="rounded-[1.75rem] border border-[var(--mint)]/30 bg-[var(--mint-soft)] px-5 py-7 text-center shadow-[var(--shadow-soft)]"
             >
-              <p className="font-display text-2xl font-extrabold text-[var(--ink)]">
+              <p className="font-display text-xl font-extrabold text-[var(--ink)]">
                 {t.contactSuccessTitle}
               </p>
-              <p className="mt-3 text-[16px] font-semibold leading-7 text-[var(--muted)]">
+              <p className="mt-2 text-[15px] font-semibold leading-6 text-[var(--muted)]">
                 {t.contactSuccess}
               </p>
               <Button
-                className="mt-6"
+                className="mt-5"
                 variant="secondary"
                 onClick={() => setStatus("idle")}
               >
@@ -82,9 +82,9 @@ export function ContactSection() {
           ) : (
             <form
               onSubmit={onSubmit}
-              className="rounded-[2rem] border border-[var(--card-border)] bg-[var(--card)] p-6 shadow-[var(--shadow-soft)] sm:p-8"
+              className="rounded-[1.75rem] border border-[var(--card-border)] bg-[var(--card)] p-4 shadow-[var(--shadow-soft)] sm:p-6"
             >
-              <div className="space-y-5">
+              <div className="grid gap-3 sm:grid-cols-2 sm:gap-4">
                 <Field
                   id="contact-name"
                   label={t.contactNameLabel || "Name"}
@@ -120,28 +120,30 @@ export function ContactSection() {
                   />
                 </Field>
 
-                <Field
-                  id="contact-message"
-                  label={t.contactMessageLabel || "Message"}
-                  hint={t.contactMessageHint}
-                >
-                  <textarea
+                <div className="sm:col-span-2">
+                  <Field
                     id="contact-message"
-                    name="message"
-                    required
-                    rows={5}
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    placeholder={
-                      t.contactMessagePlaceholder || "Tell us what’s on your mind…"
-                    }
-                    className={`${inputClass} min-h-[140px] resize-y`}
-                  />
-                </Field>
+                    label={t.contactMessageLabel || "Message"}
+                    hint={t.contactMessageHint}
+                  >
+                    <textarea
+                      id="contact-message"
+                      name="message"
+                      required
+                      rows={3}
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      placeholder={
+                        t.contactMessagePlaceholder || "Tell us what’s on your mind…"
+                      }
+                      className={`${inputClass} min-h-[96px] resize-y`}
+                    />
+                  </Field>
+                </div>
               </div>
 
               {status === "error" ? (
-                <p role="alert" className="mt-4 text-[14px] font-semibold text-[var(--coral)]">
+                <p role="alert" className="mt-3 text-[14px] font-semibold text-[var(--coral)]">
                   {error || t.contactError}
                 </p>
               ) : null}
@@ -149,7 +151,7 @@ export function ContactSection() {
               <Button
                 type="submit"
                 disabled={status === "sending"}
-                className="mt-6 w-full"
+                className="mt-4 w-full sm:w-auto sm:min-w-[200px]"
               >
                 {status === "sending" ? t.contactSending : t.contactSubmit}
               </Button>
@@ -162,7 +164,7 @@ export function ContactSection() {
 }
 
 const inputClass =
-  "mt-2 w-full rounded-2xl border border-[var(--border)] bg-[var(--bg-peach)] px-4 py-3.5 text-[16px] font-semibold text-[var(--ink)] outline-none transition placeholder:text-[var(--muted)] focus:border-[var(--coral)] focus:ring-2 focus:ring-[var(--coral)]/25 dark:bg-[var(--bg-peach-deep)]";
+  "mt-1.5 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-peach)] px-3.5 py-2.5 text-[15px] font-semibold text-[var(--ink)] outline-none transition placeholder:text-[var(--muted)] focus:border-[var(--coral)] focus:ring-2 focus:ring-[var(--coral)]/25 dark:bg-[var(--bg-peach-deep)]";
 
 function Field({
   id,
@@ -177,11 +179,11 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={id} className="text-[14px] font-extrabold text-[var(--ink)]">
+      <label htmlFor={id} className="text-[13px] font-extrabold text-[var(--ink)]">
         {label}
       </label>
       {hint ? (
-        <p className="mt-1 text-[13px] font-medium text-[var(--muted)]">{hint}</p>
+        <p className="mt-0.5 text-[12px] font-medium text-[var(--muted)]">{hint}</p>
       ) : null}
       {children}
     </div>
