@@ -9,6 +9,6 @@ export const PLAY_STORE_URL =
 export const APP_WEB_URL = "https://sip-and-pill.app";
 
 /** External tip jar (Ko-fi). */
-export const DONATION_URL = "https://ko-fi.com/A8Y124TIG4";
+export const DONATION_URL = "https://ko-fi.com/sipandpill";
 
 export const GITHUB_URL = "https://github.com/petra3693/sip-and-pill-web";
