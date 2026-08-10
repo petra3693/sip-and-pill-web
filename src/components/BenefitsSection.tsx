@@ -54,7 +54,7 @@ export function BenefitsSection() {
 
 function GiftIcon() {
   return (
-    <svg className="size-28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg className="size-14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path
         d="M12 8v13M4.5 11h15v8.5a1.5 1.5 0 0 1-1.5 1.5h-12a1.5 1.5 0 0 1-1.5-1.5V11Z"
         stroke="currentColor"
@@ -73,7 +73,7 @@ function GiftIcon() {
 
 function ShieldIcon() {
   return (
-    <svg className="size-28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg className="size-14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path
         d="M12 3 5 6v6c0 4.5 2.8 7.4 7 9 4.2-1.6 7-4.5 7-9V6l-7-3Z"
         stroke="currentColor"
@@ -93,7 +93,7 @@ function ShieldIcon() {
 
 function SparkIcon() {
   return (
-    <svg className="size-28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg className="size-14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path
         d="M12 3.5 13.2 9l5.3 1.2L13.2 11.4 12 16.5l-1.2-5.1L5.5 10.2 10.8 9 12 3.5Z"
         stroke="currentColor"
@@ -112,7 +112,7 @@ function SparkIcon() {
 
 function BellIcon() {
   return (
-    <svg className="size-28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg className="size-14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path
         d="M6.5 10.5a5.5 5.5 0 0 1 11 0c0 4.2 1.3 5.5 1.3 5.5H5.2s1.3-1.3 1.3-5.5Z"
         stroke="currentColor"

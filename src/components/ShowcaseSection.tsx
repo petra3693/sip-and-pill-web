@@ -7,33 +7,22 @@ import { FadeIn, Float } from "@/components/Motion";
 export function ShowcaseSection() {
   const { t } = useLocale();
 
-  const rows = [
+  const topItems = [
     {
       id: "free",
       eyebrow: "01",
       title: t.valueFreeTitle,
       body: t.valueFreeDesc,
-      reverse: false,
-      visual: {
-        src: "/screenshots/setup-flow.png",
-        alt: "Sip & Pill setup screens for water and medication goals",
-        width: 1024,
-        height: 766,
-      },
     },
     {
       id: "private",
       eyebrow: "02",
       title: t.valuePrivateTitle,
       body: t.valuePrivateDesc,
-      reverse: true,
-      visual: {
-        src: "/screenshots/home-settings.png",
-        alt: "Sip & Pill home and settings screens",
-        width: 978,
-        height: 1024,
-      },
     },
+  ];
+
+  const rows = [
     {
       id: "simple",
       eyebrow: "03",
@@ -77,7 +66,38 @@ export function ShowcaseSection() {
           </p>
         </FadeIn>
 
-        <div className="mt-12 space-y-14 sm:mt-14 sm:space-y-16">
+        <FadeIn delay={0.05} className="mt-10 sm:mt-12">
+          <Float amplitude={6} duration={4}>
+            <Image
+              src="/screenshots/setup-flow.png"
+              alt="Sip & Pill setup screens for water and medication goals"
+              width={1024}
+              height={766}
+              className="mx-auto h-auto w-full max-w-4xl object-contain drop-shadow-2xl"
+              priority
+            />
+          </Float>
+        </FadeIn>
+
+        <div className="mt-10 grid gap-8 sm:mt-12 sm:grid-cols-2 sm:gap-10 lg:gap-14">
+          {topItems.map((item, index) => (
+            <FadeIn key={item.id} delay={0.06 + index * 0.04}>
+              <article>
+                <p className="text-[13px] font-extrabold uppercase tracking-[0.16em] text-[var(--lavender-deep)]">
+                  {item.eyebrow}
+                </p>
+                <h3 className="font-display mt-2 text-3xl font-extrabold tracking-[-0.03em] text-[var(--ink)] sm:text-[2.35rem]">
+                  {item.title}
+                </h3>
+                <p className="mt-3 max-w-md text-[17px] font-semibold leading-8 text-[var(--ink)]">
+                  {item.body}
+                </p>
+              </article>
+            </FadeIn>
+          ))}
+        </div>
+
+        <div className="mt-14 space-y-14 sm:mt-16 sm:space-y-16">
           {rows.map((row, index) => (
             <FadeIn key={row.id} delay={0.05 * index}>
               <article
