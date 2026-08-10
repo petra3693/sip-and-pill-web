@@ -28,14 +28,14 @@ export function DonationModal({ open, onClose }: DonationModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-[80] flex items-end justify-center bg-[rgba(26,20,40,0.55)] p-3 animate-fade-in sm:items-center sm:p-4"
+      className="fixed inset-0 z-[80] flex items-center justify-center bg-[rgba(26,20,40,0.55)] p-4 animate-fade-in"
       role="dialog"
       aria-modal="true"
       aria-label="Confirm your support"
       onClick={onClose}
     >
       <div
-        className="flex max-h-[90vh] w-full max-w-md flex-col rounded-[28px] bg-white p-4 shadow-2xl animate-fade-up sm:p-5"
+        className="flex max-h-[90vh] w-full max-w-md flex-col rounded-[28px] bg-white p-5 shadow-2xl animate-fade-up"
         style={{
           overflowY: "auto",
           WebkitOverflowScrolling: "touch",
@@ -51,10 +51,10 @@ export function DonationModal({ open, onClose }: DonationModalProps) {
         </p>
 
         <div
-          className="mt-4 w-full rounded-2xl"
+          className="mt-4 w-full shrink-0 rounded-2xl"
           style={{
             width: "100%",
-            height: "600px",
+            height: "min(600px, calc(90vh - 180px))",
             overflowY: "auto",
             WebkitOverflowScrolling: "touch",
             touchAction: "pan-y",
@@ -69,7 +69,7 @@ export function DonationModal({ open, onClose }: DonationModalProps) {
               border: "none",
               width: "100%",
               height: "100%",
-              minHeight: "600px",
+              minHeight: "520px",
               background: "transparent",
             }}
           />

@@ -5,7 +5,6 @@ import { useDonation } from "@/components/DonationProvider";
 import { HeroVisual } from "@/components/HeroVisual";
 import { useLocale } from "@/components/LocaleProvider";
 import { FadeIn } from "@/components/Motion";
-import { APP_WEB_URL } from "@/lib/links";
 
 export function HeroSection() {
   const { t } = useLocale();
@@ -33,18 +32,9 @@ export function HeroSection() {
             {t.heroSubheadline} {t.trustLine}
           </p>
 
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+          <div className="mt-6">
             <Button onClick={openDonation} className="w-full sm:w-auto sm:min-w-[220px]">
               {t.supportProjectCta}
-            </Button>
-            <Button
-              variant="secondary"
-              href={APP_WEB_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto sm:min-w-[180px]"
-            >
-              {t.openAppCta}
             </Button>
           </div>
         </FadeIn>

@@ -314,7 +314,7 @@ const en: Dictionary = {
     "Sip & Pill didn’t start as a product idea. It started as worry — and the wish to help from afar.",
   storyTriggerTitle: "A summer that felt dangerous",
   storyTriggerBody:
-    "During the extreme heatwaves of 2026, staying hydrated stopped feeling optional. Governments warned people to drink enough water so hospitals wouldn’t overflow. I watched my normally fit 89-year-old neighbor struggle with the heat. Then my mother told me her kidney values had dropped — most likely because she wasn’t drinking enough. I worried. I scolded her (as an anxious daughter does). But I don’t live with her, so I can’t check in every day.",
+    "During the extreme heatwaves of 2026, dehydration stopped feeling abstract. Watching a fit 89-year-old neighbor struggle — and seeing a close relative's health take a hit from not drinking enough — was impossible to ignore.",
   storyFrustrationTitle: "The apps I found weren’t built for her",
   storyFrustrationBody:
     "I looked for something simple. Instead I found paywalls, subscriptions, and cluttered screens. Even the paid ones felt hard to use — nothing I could trust my parents with on the first try.",
@@ -518,7 +518,7 @@ const hu: Dictionary = {
     "A Sip & Pill nem termékötletként indult. Aggodalomból indult — és abból a vágyból, hogy távolról is segíthessek.",
   storyTriggerTitle: "Egy nyár, ami veszélyesnek tűnt",
   storyTriggerBody:
-    "A 2026-os extrém hőhullámok alatt a hidratálás már nem „jó tanács” volt. A kormányok arra kértek mindenkit, hogy igyon eleget, nehogy a kórházak megteljenek. Láttam, hogy a szokás szerint formában lévő, 89 éves szomszédom küzd a hővel. Aztán anyukám elmondta: a veséértékei jelentősen csökkentek — valószínűleg azért, mert nem ivott eleget. Aggódtam. Leszidtam (ahogy egy szorongó lány szokta). De nem lakom vele, így nem tudok minden nap ellenőrizni.",
+    "A 2026-os extrém hőhullámok alatt a kiszáradás már nem absztrakt veszély volt. Egy formában lévő, 89 éves szomszéd küzdelmét látni — és egy közeli hozzátartozó egészségének visszaesését a kevés ivás miatt — lehetetlen volt figyelmen kívül hagyni.",
   storyFrustrationTitle: "Amit találtam, nem neki készült",
   storyFrustrationBody:
     "Egyszerű megoldást kerestem. Helyette fizetőfalakat, előfizetéseket és zsúfolt képernyőket találtam. Még a fizetősek is nehezen használhatók voltak — semmit sem mertem volna a szüleimre bízni elsőre.",
@@ -725,7 +725,7 @@ const es: Dictionary = {
     "Un proyecto personal nacido de olas de calor, preocupación familiar y frustración con apps de salud de pago.",
   storyTriggerTitle: "El detonante",
   storyTriggerBody:
-    "Las olas de calor extremas de 2026 mostraron lo peligrosa que puede ser la deshidratación para quienes queremos. Ver a un vecino de 89 años, en buena forma, sufrir, y descubrir problemas renales de mi madre por falta de agua, fue una llamada de atención.",
+    "Durante las olas de calor extremas de 2026, la deshidratación dejó de sentirse abstracta. Ver a un vecino de 89 años, en buena forma, sufrir — y ver cómo la salud de un familiar cercano se resentía por no beber lo suficiente — fue imposible de ignorar.",
   storyFrustrationTitle: "La frustración",
   storyFrustrationBody:
     "Buscar una app de seguimiento simple me llevó a muros de pago interminables, suscripciones mensuales caras e interfaces abarrotadas que mi madre nunca podría usar.",
@@ -932,7 +932,7 @@ const fr: Dictionary = {
     "Un projet personnel né des canicules, de l’inquiétude familiale et de la frustration face aux apps santé payantes.",
   storyTriggerTitle: "Le déclencheur",
   storyTriggerBody:
-    "Les canicules extrêmes de 2026 ont rappelé à quel point la déshydratation peut être dangereuse pour nos proches. Voir un voisin de 89 ans, pourtant en forme, souffrir, et découvrir les problèmes rénaux de ma mère liés au manque d’eau, a été un électrochoc.",
+    "Pendant les canicules extrêmes de 2026, la déshydratation a cessé d’être abstraite. Voir un voisin de 89 ans, pourtant en forme, souffrir — et constater que la santé d’un proche était affectée par un manque d’eau — était impossible à ignorer.",
   storyFrustrationTitle: "La frustration",
   storyFrustrationBody:
     "Chercher une app de suivi simple menait à des paywalls sans fin, des abonnements mensuels chers et des interfaces encombrées que ma mère n’aurait jamais pu utiliser.",
@@ -1139,7 +1139,7 @@ const de: Dictionary = {
     "Ein persönliches Projekt aus Hitzewellen, familiärer Sorge und Frustration über bezahlte Gesundheits-Apps.",
   storyTriggerTitle: "Der Auslöser",
   storyTriggerBody:
-    "Die extremen Hitzewellen 2026 haben gezeigt, wie gefährlich Dehydration für unsere Lieben sein kann. Einen fitten 89-jährigen Nachbarn leiden zu sehen und bei meiner Mutter Nierenprobleme durch zu wenig Wasser zu entdecken, war ein Weckruf.",
+    "Während der extremen Hitzewellen 2026 fühlte sich Dehydration plötzlich nicht mehr abstrakt an. Einen fitten 89-jährigen Nachbarn leiden zu sehen — und mitzuerleben, wie die Gesundheit einer nahen Angehörigen unter zu wenig Trinken litt — war unmöglich zu ignorieren.",
   storyFrustrationTitle: "Die Frustration",
   storyFrustrationBody:
     "Die Suche nach einer einfachen Tracking-App führte zu endlosen Paywalls, teuren Monatsabos und überladenen Oberflächen, die meine Mutter nie bedienen könnte.",
@@ -1346,7 +1346,7 @@ const it: Dictionary = {
     "Un progetto personale nato da ondate di calore, preoccupazione familiare e frustrazione per le app salute a pagamento.",
   storyTriggerTitle: "Il grilletto",
   storyTriggerBody:
-    "Le ondate di calore estreme del 2026 hanno evidenziato quanto possa essere pericolosa la disidratazione per i nostri cari. Vedere un vicino di 89 anni, ancora in forma, faticare, e scoprire problemi renali di mia madre per mancanza d’acqua, è stato un campanello d’allarme.",
+    "Durante le ondate di calore estreme del 2026, la disidratazione ha smesso di sembrare astratta. Vedere un vicino di 89 anni, ancora in forma, faticare — e vedere la salute di un familiare vicino risentirne per non bere abbastanza — era impossibile da ignorare.",
   storyFrustrationTitle: "La frustrazione",
   storyFrustrationBody:
     "Cercare un’app di monitoraggio semplice ha portato a paywall infiniti, abbonamenti mensili costosi e interfacce sovraccariche che mia madre non avrebbe mai potuto usare.",
@@ -1553,7 +1553,7 @@ const pt: Dictionary = {
     "Um projeto pessoal nascido de ondas de calor, preocupação familiar e frustração com apps de saúde pagas.",
   storyTriggerTitle: "O gatilho",
   storyTriggerBody:
-    "As ondas de calor extremas de 2026 mostraram o quão perigosa a desidratação pode ser para quem amamos. Ver um vizinho de 89 anos, ainda em forma, a sofrer, e descobrir problemas renais da minha mãe por falta de água, foi um alerta.",
+    "Durante as ondas de calor extremas de 2026, a desidratação deixou de parecer abstrata. Ver um vizinho de 89 anos, ainda em forma, a sofrer — e ver a saúde de um familiar próximo sofrer por não beber o suficiente — foi impossível de ignorar.",
   storyFrustrationTitle: "A frustração",
   storyFrustrationBody:
     "Procurar uma app de acompanhamento simples levou a paywalls sem fim, assinaturas mensais caras e interfaces sobrecarregadas que a minha mãe nunca conseguiria usar.",
@@ -1760,7 +1760,7 @@ const ja: Dictionary = {
     "熱波、家族への心配、そして有料ヘルスケアアプリへのもどかしさから生まれた個人プロジェクトです。",
   storyTriggerTitle: "きっかけ",
   storyTriggerBody:
-    "2026年の極端な熱波は、脱水が大切な人にとってどれほど危険かを浮き彫りにしました。元気だった89歳の隣人の苦しさを目にし、母の腎臓の問題が水分不足によるものだと知ったことが、目覚めの瞬間でした。",
+    "2026年の極端な熱波の中で、脱水はもう他人事ではありませんでした。元気だった89歳の隣人が苦しむ姿を見て、そして十分な水分を取らなかったことで身近な親族の健康が損なわれるのを見て、見過ごすことはできませんでした。",
   storyFrustrationTitle: "もどかしさ",
   storyFrustrationBody:
     "シンプルな記録アプリを探すと、終わりのないペイウォール、高い月額課金、母には到底使えないごちゃごちゃした画面ばかりでした。",
@@ -1967,7 +1967,7 @@ const ko: Dictionary = {
     "폭염, 가족에 대한 걱정, 유료 건강 앱에 대한 좌절에서 태어난 개인 프로젝트입니다.",
   storyTriggerTitle: "계기",
   storyTriggerBody:
-    "2026년의 극심한 폭염은 탈수가 사랑하는 사람에게 얼마나 위험할 수 있는지를 보여 주었습니다. 건강한 89세 이웃이 힘들어하는 모습을 보고, 어머니의 신장 문제가 수분 부족 때문임을 알게 된 것이 깨달음의 순간이었습니다.",
+    "2026년의 극심한 폭염 속에서 탈수는 더 이상 추상적인 위험이 아니었습니다. 건강한 89세 이웃이 힘들어하는 모습을 보고, 충분히 마시지 않아 가까운 가족의 건강이 나빠지는 것을 보며, 그냥 지나칠 수 없었습니다.",
   storyFrustrationTitle: "좌절",
   storyFrustrationBody:
     "간단한 추적 앱을 찾다 보니 끝없는 페이월, 비싼 월 구독, 어머니가 절대 다룰 수 없는 복잡한 인터페이스뿐이었습니다.",

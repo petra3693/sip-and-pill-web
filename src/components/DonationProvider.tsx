@@ -9,6 +9,7 @@ import {
   type ReactNode,
 } from "react";
 import { DonationModal } from "@/components/DonationModal";
+import { DONATION_URL } from "@/lib/links";
 
 type DonationContextValue = {
   openDonation: () => void;
@@ -16,10 +17,20 @@ type DonationContextValue = {
 
 const DonationContext = createContext<DonationContextValue | null>(null);
 
+const MOBILE_QUERY = "(max-width: 767px)";
+
 export function DonationProvider({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
 
-  const openDonation = useCallback(() => setOpen(true), []);
+  const openDonation = useCallback(() => {
+    // Mobile Safari often can't scroll third-party donation iframes — open Ko-fi directly.
+    if (typeof window !== "undefined" && window.matchMedia(MOBILE_QUERY).matches) {
+      window.open(DONATION_URL, "_blank", "noopener,noreferrer");
+      return;
+    }
+    setOpen(true);
+  }, []);
+
   const closeDonation = useCallback(() => setOpen(false), []);
 
   const value = useMemo(() => ({ openDonation }), [openDonation]);
