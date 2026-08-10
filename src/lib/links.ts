@@ -8,7 +8,7 @@ export const PLAY_STORE_URL =
 /** Live web / PWA entry. */
 export const APP_WEB_URL = "https://sip-and-pill.app";
 
-/** External tip jar (Buy Me a Coffee / Ko-fi / etc.). */
-export const DONATION_URL = "https://buymeacoffee.com/sipandpill";
+/** External tip jar (Ko-fi). */
+export const DONATION_URL = "https://ko-fi.com/A8Y124TIG4";
 
 export const GITHUB_URL = "https://github.com/petra3693/sip-and-pill-web";
