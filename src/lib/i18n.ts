@@ -252,7 +252,7 @@ const en: Dictionary = {
   downloadOn: "Download on the",
   trustQuote: "I wanted something my parents could open once and trust for good.",
   trustLine: "Built for parents, grandparents, and anyone who wants a calm daily reminder.",
-  buyCoffee: "Buy Me a Coffee",
+  buyCoffee: "Support the Project",
   freeOfflinePrivate: "100% Free • Offline • Private",
   tagline: "Stay hydrated, stay healthy!",
   heroBody:
@@ -364,7 +364,7 @@ const en: Dictionary = {
     "Your coffee helps keep Sip & Pill free and ad-free for families who need a simple companion they can trust.",
   supportThanks:
     "Thank you for helping families stay healthy — free of charge.",
-  supportNote: "One-time support via Buy Me a Coffee · secure checkout",
+  supportNote: "One-time support · secure checkout",
   contactEyebrow: "Contact",
   contactTitle: "Say hello",
   contactIntro: "Questions, feedback, or a kind word — we’d love to hear from you. Your message stays private and goes straight to the developer.",
@@ -418,7 +418,7 @@ const en: Dictionary = {
   supportDeveloper: "Support Developer",
   supportCharityBlurb:
     "Sip & Pill stays free because of people like you. Donations live on this website — not inside the app — so families never hit a paywall. If it helps you or someone you love, a coffee keeps it free for the next parents who need it.",
-  inviteCoffee: "Buy Me a Coffee",
+  inviteCoffee: "Support the Project",
   giveAsYouLike: "Give as you see fit",
   chooseAmount: "Choose an amount",
   customAmountLabel: "Custom amount",
@@ -568,7 +568,7 @@ const hu: Dictionary = {
     "A kávéd segít, hogy a Sip & Pill ingyenes és reklámmentes maradjon azoknak a családoknak, akiknek egyszerű, megbízható társ kell.",
   supportThanks:
     "Köszönjük, hogy segítesz a családoknak egészségesnek maradni — díjmentesen.",
-  supportNote: "Egyszeri támogatás a Buy Me a Coffee-n · biztonságos fizetés",
+  supportNote: "Egyszeri támogatás · biztonságos fizetés",
   contactEyebrow: "Kapcsolat",
   contactTitle: "Írj nekünk",
   contactIntro: "Kérdés, visszajelzés vagy egy kedves szó — örömmel olvassuk. Az üzeneted privát marad, és közvetlenül a fejlesztőhöz érkezik.",

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Button } from "@/components/Button";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { useLocale } from "@/components/LocaleProvider";
@@ -66,7 +66,7 @@ const SECTIONS: { title: string; body: string[] }[] = [
   {
     title: "10. Donations",
     body: [
-      'Donations made via this website (e.g. "Buy Me a Coffee") are voluntary, one-time, and do not unlock any paid features — every feature of Sip & Pill remains free for everyone. Donations are processed by a third-party payment provider under its own terms; we are not responsible for that provider\'s service.',
+      'Donations made via this website (e.g. "Support the Project") are voluntary, one-time, and do not unlock any paid features — every feature of Sip & Pill remains free for everyone. Donations are processed by a third-party payment provider under its own terms; we are not responsible for that provider\'s service.',
     ],
   },
   {
@@ -135,12 +135,9 @@ export default function TermsPage() {
           ))}
         </div>
 
-        <Link
-          href="/"
-          className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-[var(--coral)] px-6 text-[15px] font-semibold text-white shadow-[var(--shadow-soft)] transition hover:brightness-105"
-        >
+        <Button href="/" className="mt-8">
           {t.backHome}
-        </Link>
+        </Button>
       </main>
       <SiteFooter />
     </div>

@@ -40,6 +40,9 @@ export function SiteFooter() {
           <Link href="/terms" className="text-white/75 transition hover:text-white">
             {t.terms}
           </Link>
+          <Link href="/impressum" className="text-white/75 transition hover:text-white">
+            Impressum
+          </Link>
           <a href="#contact" className="text-white/75 transition hover:text-white">
             {t.contact}
           </a>

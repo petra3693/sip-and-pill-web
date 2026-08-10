@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Button } from "@/components/Button";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { useLocale } from "@/components/LocaleProvider";
@@ -80,7 +80,7 @@ const SECTIONS: { title: string; body: string[] }[] = [
   {
     title: "11. This website",
     body: [
-      "This site (sip-and-pill.app) also processes the message and reply email you submit via the Contact form. This is used only to reply to you and is not shared with third parties or used for marketing.",
+      "This site (sip-and-pill.app) also processes the message and reply email you submit via the Contact form. Submissions are relayed through a third-party form-processing service (Web3Forms or FormSubmit, depending on configuration) solely so we can reply to you; they are not shared for marketing.",
     ],
   },
   {
@@ -132,12 +132,9 @@ export default function PrivacyPage() {
           ))}
         </div>
 
-        <Link
-          href="/"
-          className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-[var(--coral)] px-6 text-[15px] font-semibold text-white shadow-[var(--shadow-soft)] transition hover:brightness-105"
-        >
+        <Button href="/" className="mt-8">
           {t.backHome}
-        </Link>
+        </Button>
       </main>
       <SiteFooter />
     </div>
