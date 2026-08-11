@@ -231,8 +231,8 @@ export type Dictionary = {
 };
 
 const en: Dictionary = {
-  navValues: "Why free",
-  navFeatures: "Features",
+  navValues: "Why different",
+  navFeatures: "What you get",
   navStory: "Our story",
   navSupport: "Support",
   navRoadmap: "Roadmap",
@@ -435,8 +435,8 @@ const en: Dictionary = {
 };
 
 const hu: Dictionary = {
-  navValues: "Miért ingyenes",
-  navFeatures: "Funkciók",
+  navValues: "Miért más",
+  navFeatures: "Amit kapsz",
   navStory: "A történet",
   navSupport: "Támogatás",
   navRoadmap: "Útiterv",
@@ -639,8 +639,8 @@ const hu: Dictionary = {
 };
 
 const es: Dictionary = {
-  navValues: "Por qué es gratis",
-  navFeatures: "Funciones",
+  navValues: "Por qué diferente",
+  navFeatures: "Lo que obtienes",
   navStory: "Nuestra historia",
   navSupport: "Apoyo",
   navRoadmap: "Hoja de ruta",
@@ -846,8 +846,8 @@ const es: Dictionary = {
 };
 
 const fr: Dictionary = {
-  navValues: "Pourquoi gratuit",
-  navFeatures: "Fonctionnalités",
+  navValues: "Pourquoi différent",
+  navFeatures: "Ce que vous obtenez",
   navStory: "Notre histoire",
   navSupport: "Soutien",
   navRoadmap: "Feuille de route",
@@ -1053,8 +1053,8 @@ const fr: Dictionary = {
 };
 
 const de: Dictionary = {
-  navValues: "Warum kostenlos",
-  navFeatures: "Funktionen",
+  navValues: "Warum anders",
+  navFeatures: "Was du bekommst",
   navStory: "Unsere Geschichte",
   navSupport: "Unterstützung",
   navRoadmap: "Roadmap",
@@ -1260,8 +1260,8 @@ const de: Dictionary = {
 };
 
 const it: Dictionary = {
-  navValues: "Perché è gratis",
-  navFeatures: "Funzioni",
+  navValues: "Perché diverso",
+  navFeatures: "Cosa ottieni",
   navStory: "La nostra storia",
   navSupport: "Supporto",
   navRoadmap: "Roadmap",
@@ -1467,8 +1467,8 @@ const it: Dictionary = {
 };
 
 const pt: Dictionary = {
-  navValues: "Porque é grátis",
-  navFeatures: "Funcionalidades",
+  navValues: "Por que diferente",
+  navFeatures: "O que você ganha",
   navStory: "A nossa história",
   navSupport: "Apoio",
   navRoadmap: "Roteiro",
@@ -1674,8 +1674,8 @@ const pt: Dictionary = {
 };
 
 const ja: Dictionary = {
-  navValues: "なぜ無料か",
-  navFeatures: "機能",
+  navValues: "違う理由",
+  navFeatures: "できること",
   navStory: "私たちの物語",
   navSupport: "サポート",
   navRoadmap: "ロードマップ",
@@ -1881,8 +1881,8 @@ const ja: Dictionary = {
 };
 
 const ko: Dictionary = {
-  navValues: "왜 무료인가",
-  navFeatures: "기능",
+  navValues: "다른 이유",
+  navFeatures: "제공 기능",
   navStory: "우리의 이야기",
   navSupport: "후원",
   navRoadmap: "로드맵",

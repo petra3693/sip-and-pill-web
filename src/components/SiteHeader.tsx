@@ -51,11 +51,12 @@ export function SiteHeader() {
   }, []);
 
   const navLinks = [
-    { href: "#different", label: t.navValues },
-    { href: "#story", label: t.navStory },
-    { href: "#roadmap", label: t.navRoadmap },
-    { href: "#support", label: t.navSupport },
-    { href: "#contact", label: t.contact },
+    { href: "/#benefits", label: t.navFeatures },
+    { href: "/#story", label: t.navStory },
+    { href: "/#support", label: t.navSupport },
+    { href: "/#different", label: t.navValues },
+    { href: "/#roadmap", label: t.navRoadmap },
+    { href: "/#contact", label: t.contact },
   ];
 
   return (
@@ -75,15 +76,15 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 text-[14px] font-semibold text-[var(--ink)]/70 lg:flex">
+        <nav className="hidden items-center gap-5 text-[14px] font-semibold text-[var(--ink)]/70 xl:gap-6 lg:flex">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="transition hover:text-[var(--coral)]"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -127,14 +128,14 @@ export function SiteHeader() {
             >
               <nav className="space-y-0.5 border-b border-[var(--card-border)] pb-3">
                 {navLinks.map((link) => (
-                  <a
+                  <Link
                     key={link.href}
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
                     className="block rounded-xl px-3 py-2.5 text-[14px] font-bold text-[var(--ink)] transition hover:bg-[var(--bg-peach)]"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
               </nav>
 

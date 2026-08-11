@@ -43,9 +43,9 @@ export function SiteFooter() {
           <Link href="/impressum" className="text-white/75 transition hover:text-white">
             Impressum
           </Link>
-          <a href="#contact" className="text-white/75 transition hover:text-white">
+          <Link href="/#contact" className="text-white/75 transition hover:text-white">
             {t.contact}
-          </a>
+          </Link>
         </nav>
 
         <div className="space-y-1 text-[12px] font-medium text-white/70">
