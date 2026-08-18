@@ -56,39 +56,38 @@ export function ShowcaseSection() {
           </Float>
         </FadeIn>
 
-        <FadeIn delay={0.08} className="mt-14 sm:mt-16">
-          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12">
-            <div className="relative mx-auto w-full max-w-[520px] sm:max-w-[560px]">
-              <div className="relative aspect-[4/5] w-full">
-                <iframe
-                  src="https://my.spline.design/iphoneanimatedmockupdepthoffield-rUvf6uZN9ct5eDSAbXzBeIYs/"
-                  title="Sip & Pill iPhone mockup"
-                  loading="lazy"
-                  className="absolute inset-0 h-full w-full border-0"
-                  allow="autoplay"
-                />
-              </div>
-            </div>
-
-            <div className="space-y-10 sm:space-y-12">
-              {stackedItems.map((item, index) => (
-                <FadeIn key={item.id} delay={0.06 + index * 0.04}>
-                  <article>
-                    <p className="text-[13px] font-extrabold uppercase tracking-[0.16em] text-[var(--lavender-deep)]">
-                      {item.eyebrow}
-                    </p>
-                    <h3 className="font-display mt-2 text-3xl font-extrabold tracking-[-0.03em] text-[var(--ink)] sm:text-[2.35rem]">
-                      {item.title}
-                    </h3>
-                    <p className="mt-3 max-w-md text-[17px] font-semibold leading-8 text-[var(--ink)]">
-                      {item.body}
-                    </p>
-                  </article>
-                </FadeIn>
-              ))}
-            </div>
+        <div className="mt-14 grid items-center gap-10 sm:mt-16 lg:grid-cols-2 lg:gap-12">
+          <div
+            className="relative mx-auto aspect-[4/5] w-full max-w-[520px] sm:max-w-[560px]"
+            style={{ colorScheme: "light" }}
+          >
+            <iframe
+              src="https://my.spline.design/iphoneanimatedmockupdepthoffield-rUvf6uZN9ct5eDSAbXzBeIYs/"
+              title="Sip & Pill iPhone mockup"
+              allow="autoplay; fullscreen"
+              className="absolute inset-0 h-full w-full border-0"
+              style={{ colorScheme: "light", background: "transparent" }}
+            />
           </div>
-        </FadeIn>
+
+          <div className="space-y-10 sm:space-y-12">
+            {stackedItems.map((item, index) => (
+              <FadeIn key={item.id} delay={0.06 + index * 0.04}>
+                <article>
+                  <p className="text-[13px] font-extrabold uppercase tracking-[0.16em] text-[var(--lavender-deep)]">
+                    {item.eyebrow}
+                  </p>
+                  <h3 className="font-display mt-2 text-3xl font-extrabold tracking-[-0.03em] text-[var(--ink)] sm:text-[2.35rem]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 max-w-md text-[17px] font-semibold leading-8 text-[var(--ink)]">
+                    {item.body}
+                  </p>
+                </article>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
 
         <FadeIn delay={0.1} className="mt-14 sm:mt-16">
           <article className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12 lg:[&>*:first-child]:order-2">
