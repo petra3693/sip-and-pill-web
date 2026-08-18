@@ -58,16 +58,16 @@ export function ShowcaseSection() {
 
         <FadeIn delay={0.08} className="mt-14 sm:mt-16">
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12">
-            <div className="relative mx-auto flex w-full max-w-[520px] items-center justify-center sm:max-w-[560px]">
-              <Float amplitude={8} duration={3.8}>
-                <Image
-                  src="/screenshots/reminders-about.png"
-                  alt="Sip & Pill reminders and About screens"
-                  width={993}
-                  height={1024}
-                  className="mx-auto h-auto w-full object-contain drop-shadow-2xl"
+            <div className="relative mx-auto w-full max-w-[520px] sm:max-w-[560px]">
+              <div className="relative aspect-[4/5] w-full">
+                <iframe
+                  src="https://my.spline.design/iphoneanimatedmockupdepthoffield-rUvf6uZN9ct5eDSAbXzBeIYs/"
+                  title="Sip & Pill iPhone mockup"
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full border-0"
+                  allow="autoplay"
                 />
-              </Float>
+              </div>
             </div>
 
             <div className="space-y-10 sm:space-y-12">
