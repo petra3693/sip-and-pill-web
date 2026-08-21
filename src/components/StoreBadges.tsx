@@ -17,7 +17,7 @@ export function StoreBadges({ className = "" }: { className?: string }) {
         href={APP_STORE_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex h-12 items-center gap-2.5 rounded-xl bg-[#0d0e23] px-4 text-white shadow-sm transition hover:brightness-125 dark:bg-[#1a1840]"
+        className="inline-flex h-12 items-center gap-2.5 rounded-xl bg-[#e6e0ff] px-4 text-[#0d0e23] shadow-sm transition hover:brightness-95"
         aria-label={t.appStoreLabel}
       >
         <AppleGlyph />
@@ -34,7 +34,7 @@ export function StoreBadges({ className = "" }: { className?: string }) {
         href={PLAY_STORE_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex h-12 items-center gap-2.5 rounded-xl bg-[#0d0e23] px-4 text-white shadow-sm transition hover:brightness-125 dark:bg-[#1a1840]"
+        className="inline-flex h-12 items-center gap-2.5 rounded-xl bg-[#e6e0ff] px-4 text-[#0d0e23] shadow-sm transition hover:brightness-95"
         aria-label={t.playStoreLabel}
       >
         <PlayGlyph />
