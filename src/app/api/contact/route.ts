@@ -90,6 +90,10 @@ export async function POST(request: Request) {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
+          "User-Agent":
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+          Origin: "https://www.sip-and-pill.app",
+          Referer: "https://www.sip-and-pill.app/",
         },
         body: JSON.stringify({
           name: name || "Anonymous",
@@ -101,8 +105,15 @@ export async function POST(request: Request) {
         }),
       });
 
-      if (!res.ok) {
-        const detail = await res.text();
+      const detail = await res.text();
+      let success = res.ok;
+      try {
+        success = success && JSON.parse(detail).success !== "false";
+      } catch {
+        success = false;
+      }
+
+      if (!success) {
         console.error("FormSubmit error:", detail);
         return NextResponse.json(
           { error: "Could not send your message. Please try again." },
