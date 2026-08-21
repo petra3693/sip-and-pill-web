@@ -46,10 +46,10 @@ export async function POST(request: Request) {
   const inbox =
     process.env.CONTACT_TO_EMAIL?.trim() ||
     process.env.SUPPORT_EMAIL?.trim();
-  const web3Key = process.env.WEB3FORMS_ACCESS_KEY?.trim();
+  const resendKey = process.env.RESEND_API_KEY?.trim();
 
-  if (!web3Key && !inbox) {
-    console.error("Contact form misconfigured: missing WEB3FORMS_ACCESS_KEY or CONTACT_TO_EMAIL");
+  if (!resendKey || !inbox) {
+    console.error("Contact form misconfigured: missing RESEND_API_KEY or CONTACT_TO_EMAIL");
     return NextResponse.json(
       { error: "Contact form is temporarily unavailable." },
       { status: 503 },
@@ -57,69 +57,28 @@ export async function POST(request: Request) {
   }
 
   try {
-    if (web3Key) {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: web3Key,
-          subject: "Sip & Pill — Contact / Feedback",
-          from_name: name || "Sip & Pill visitor",
-          name: name || "Anonymous",
-          email,
-          message,
-          locale,
-        }),
-      });
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${resendKey}`,
+      },
+      body: JSON.stringify({
+        from: "Sip & Pill <onboarding@resend.dev>",
+        to: [inbox],
+        reply_to: email,
+        subject: "Sip & Pill — Contact / Feedback",
+        text: `From: ${name || "Anonymous"} <${email}>\nLocale: ${locale}\n\n${message}`,
+      }),
+    });
 
-      if (!res.ok) {
-        const detail = await res.text();
-        console.error("Web3Forms error:", detail);
-        return NextResponse.json(
-          { error: "Could not send your message. Please try again." },
-          { status: 502 },
-        );
-      }
-    } else if (inbox) {
-      // FormSubmit keeps the inbox address server-side only (never shipped to the browser).
-      const res = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(inbox)}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          "User-Agent":
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
-          Origin: "https://www.sip-and-pill.app",
-          Referer: "https://www.sip-and-pill.app/",
-        },
-        body: JSON.stringify({
-          name: name || "Anonymous",
-          email,
-          message,
-          locale,
-          _subject: "Sip & Pill — Contact / Feedback",
-          _template: "table",
-        }),
-      });
-
+    if (!res.ok) {
       const detail = await res.text();
-      let success = res.ok;
-      try {
-        success = success && JSON.parse(detail).success !== "false";
-      } catch {
-        success = false;
-      }
-
-      if (!success) {
-        console.error("FormSubmit error:", detail);
-        return NextResponse.json(
-          { error: "Could not send your message. Please try again." },
-          { status: 502 },
-        );
-      }
+      console.error("Resend error:", detail);
+      return NextResponse.json(
+        { error: "Could not send your message. Please try again." },
+        { status: 502 },
+      );
     }
 
     return NextResponse.json({ ok: true });
