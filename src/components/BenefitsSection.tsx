@@ -2,7 +2,6 @@
 
 import { useLocale } from "@/components/LocaleProvider";
 import { FadeIn } from "@/components/Motion";
-import { StoreBadges } from "@/components/StoreBadges";
 
 export function BenefitsSection() {
   const { t } = useLocale();
@@ -43,10 +42,6 @@ export function BenefitsSection() {
             </FadeIn>
           ))}
         </div>
-
-        <FadeIn delay={0.12} className="mt-10">
-          <StoreBadges />
-        </FadeIn>
       </div>
     </section>
   );

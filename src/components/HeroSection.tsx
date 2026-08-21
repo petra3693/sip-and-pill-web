@@ -5,6 +5,7 @@ import { useDonation } from "@/components/DonationProvider";
 import { HeroVisual } from "@/components/HeroVisual";
 import { useLocale } from "@/components/LocaleProvider";
 import { FadeIn } from "@/components/Motion";
+import { StoreBadges } from "@/components/StoreBadges";
 
 export function HeroSection() {
   const { t } = useLocale();
@@ -37,6 +38,8 @@ export function HeroSection() {
               {t.supportProjectCta}
             </Button>
           </div>
+
+          <StoreBadges className="mt-4 justify-center sm:justify-start" />
         </FadeIn>
 
         <FadeIn delay={0.1}>
