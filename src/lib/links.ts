@@ -1,6 +1,5 @@
-/** App Store product page (update when live). */
-// TODO: replace with the real apps.apple.com/app/idXXXXXXXXX URL once the app is approved
-export const APP_STORE_URL = "https://apps.apple.com/app/sip-and-pill";
+/** App Store product page. */
+export const APP_STORE_URL = "https://apps.apple.com/us/app/sip-pill/id6799997658";
 
 /** Google Play product page (update when live). */
 export const PLAY_STORE_URL =
